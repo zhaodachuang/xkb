@@ -114,8 +114,6 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                               break;
 
                             case 'C':
-                              // print(state);
-                              // print(widget.listData);
                               print(
                                   "_________________________________________________________________________");
                               BlocProvider.of<CoustomerBloc>(context)
