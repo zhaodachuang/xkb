@@ -527,6 +527,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "7.1.6"
+  fluwx:
+    dependency: "direct main"
+    description:
+      name: fluwx
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.6.2"
   foundation_fluttify:
     dependency: transitive
     description:

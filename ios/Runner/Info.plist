@@ -11,17 +11,6 @@
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
 	<string>新客邦</string>
-	<key>CFBundleDocumentTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeName</key>
-			<string>MKDirectionsRequest</string>
-			<key>LSItemContentTypes</key>
-			<array>
-				<string>com.apple.maps.directionsrequest</string>
-			</array>
-		</dict>
-	</array>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -42,19 +31,24 @@
 	<array>
 		<string>iosamap</string>
 		<string>amapuri</string>
+		<string>weixin</string>
+		<string>weixinULAPI</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>MKDirectionsApplicationSupportedModes</key>
-	<array>
-		<string>MKDirectionsModeOther</string>
-	</array>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<string>YES</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>App需要您的同意，才能访问音乐</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>App需要您的同意，才能访问日历</string>
 	<key>NSCameraUsageDescription</key>
-	<string>App需要您的同意,才能访问相机</string>
+	<string>App会在上传头像，发布炫拍等图片服务中访问您的相机权限</string>
 	<key>NSContactsUsageDescription</key>
 	<string>App需要您的同意,才能访问常用联系人</string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -66,7 +60,7 @@
 	<key>NSMotionUsageDescription</key>
 	<string>App需要您的同意，才能访问后台监控</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App需要您的同意,才能访问相册</string>
+	<string>App会在上传头像，发布炫拍等图片服务中访问您的相册权限</string>
 	<key>NSSpeechRecognitionUsageDescription</key>
 	<string>App需要您的同意，才能访问加速传感器</string>
 	<key>UILaunchStoryboardName</key>

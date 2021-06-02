@@ -255,6 +255,12 @@ abstract class RetroRestService {
     @Query("leaderweek") int leaderweek,
   );
 
+  @GET("/broker/mapi/br/userinfo/mandate/{id}")
+  Future sendAuth(
+    @Path() String id,
+    @Query("tenantId") String tenantId,
+  );
+
   // @POST("/mapi/br/userinfo/affcode")
   // Future<dynamic> getAffCode(@Body() List<String> affIds);
 

@@ -46,7 +46,6 @@ class _ContentPagerState extends State<ContentPager> {
             WechatHousingPage(affData: widget.affData),
             WechatContactPage(affData: widget.affData),
             WechatRecommendPage(),
-            // WechatSharePage(),
             WechatMinePage(affData: widget.affData),
           ],
         ))

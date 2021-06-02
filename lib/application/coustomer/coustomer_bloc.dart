@@ -149,6 +149,7 @@ class CoustomerBloc extends Bloc<CoustomerEvent, CoustomerState> {
         };
         var res = await _iMessagesFacade.unFrezzeprcessed(processedId, query);
         print(res);
+        yield state.copyWith();
       },
       // gethistory: (value) async* {
       //   var query = {
@@ -160,6 +161,7 @@ class CoustomerBloc extends Bloc<CoustomerEvent, CoustomerState> {
       //   yield state.copyWith(history: res);
       // },
       gethistorydata: (value) async* {
+        yield state.copyWith(historyVariable: [], userInfo: {});
         Map<String, dynamic> userInfo =
             jsonDecode(_preferences.get("CACHED_SIGN_IN_USER"));
 
@@ -189,6 +191,7 @@ class CoustomerBloc extends Bloc<CoustomerEvent, CoustomerState> {
         yield state.copyWith(historyVariable: list, userInfo: userInfo);
       },
       gethistory: (value) async* {
+        yield state.copyWith(history: []);
         var query = {
           "processInstanceId": value.instanceId,
           "sortBy": "startTime",
@@ -367,6 +370,16 @@ class CoustomerBloc extends Bloc<CoustomerEvent, CoustomerState> {
       },
       saveCustomerItem: (value) async* {
         yield state.copyWith(coustomDataItem: value.coustomDataItem);
+      },
+      resaveDataItem: (value) async* {
+        print(state.coustomDataItem);
+        var query = {"id": state.coustomDataItem["id"]};
+        var res = await _coustomerFacade.getCoustomerList(query);
+        print(res);
+        print("__________resaveDataItem_____________");
+        if (res["ok"]) {
+          yield state.copyWith(coustomDataItem: res["data"]["records"][0]);
+        }
       },
     );
   }

@@ -7,7 +7,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
+# followed by an optional build number separated by a +. 
 # Both the version and the builder number may be overridden in flutter
 # build by specifying --build-name and --build-number, respectively.
 # In Android, build-name is used as versionName while build-number used as versionCode.
@@ -83,6 +83,7 @@ dependencies:
   amap_map_fluttify: ^0.30.1
   amap_search_fluttify: ^0.16.2
   amap_location_fluttify: ^0.20.0
+  fluwx: ^2.6.2
 
 dev_dependencies:
   flutter_test:
@@ -102,8 +103,8 @@ dev_dependencies:
   retrofit_generator: ^1.4.0
 
 # For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec  
-# The following section is specific to Flutter.  
+# following page: https://dart.dev/tools/pub/pubspec 
+# The following section is specific to Flutter. 
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

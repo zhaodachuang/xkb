@@ -81,4 +81,46 @@ class MineService implements IMineService {
       return left(const WebScoketFailure.serverError());
     }
   }
+
+  @override
+  Future<Either<WebScoketFailure, Map<String, dynamic>>> sendAuth() async {
+    var apiResult = await mineRemoteDataSource.sendAuth();
+    Map<String, dynamic> sendAuth = {};
+    try {
+      bool successAndFailure = false;
+      apiResult.when(
+          success: (right) {
+            successAndFailure = true;
+            sendAuth = right;
+          },
+          failure: (error) => successAndFailure = false);
+      return successAndFailure
+          ? right(sendAuth)
+          : left(const WebScoketFailure.receiveMessageFail());
+    } on Exception catch (error) {
+      print("error is :: " + error.toString());
+      return left(const WebScoketFailure.serverError());
+    }
+  }
+
+  @override
+  Future<Either<WebScoketFailure, String>> submitOpenid(openid, unionid) async {
+    var apiResult = await mineRemoteDataSource.submitOpenid(openid, unionid);
+    String submitInfo = "";
+    try {
+      bool successAndFailure = false;
+      apiResult.when(
+          success: (right) {
+            successAndFailure = true;
+            submitInfo = right;
+          },
+          failure: (error) => successAndFailure = false);
+      return successAndFailure
+          ? right(submitInfo)
+          : left(const WebScoketFailure.receiveMessageFail());
+    } on Exception catch (error) {
+      print("error is :: " + error.toString());
+      return left(const WebScoketFailure.serverError());
+    }
+  }
 }

@@ -10,17 +10,10 @@ import 'package:flutter_ui/presentation/home/ui_view/mine_about_us_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_achievement_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_aiCard_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_change_project_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/mine_consultation_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/mine_guest_phone_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/mine_online_service_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/mine_order_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/mine_ownership_plan_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_suggest_feedback_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/wechat.dart';
-import 'package:flutter_ui/presentation/home/ui_view/wechat_new_view.dart';
-import 'package:flutter_ui/presentation/home/ui_view/wechat_view.dart';
 import 'package:flutter_ui/presentation/routes/router.gr.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:fluwx/fluwx.dart' as fluwx;
 
 class MineScreen extends StatefulWidget {
   const MineScreen({Key key, this.animationController}) : super(key: key);
@@ -29,6 +22,8 @@ class MineScreen extends StatefulWidget {
   @override
   _MineScreenState createState() => _MineScreenState();
 }
+
+const CACHED_SIGN_IN_USER = 'CACHED_SIGN_IN_USER';
 
 class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
   Animation<double> topBarAnimation;
@@ -91,16 +86,6 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
         animationController: widget.animationController,
       );
     }));
-
-    // listViews.add(
-    //   MineConsultationView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 2, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
     listViews.add(
       MineAiCardView(
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
@@ -119,33 +104,6 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
         animationController: widget.animationController,
       ),
     );
-    // listViews.add(
-    //   MineOrder(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 4, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
-    // listViews.add(
-    //   MineGuestPhoneView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 5, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
-    // listViews.add(
-    //   MineOwnershipPlanView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 6, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
     listViews.add(
       MineSuggestFeedbackView(
         animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
@@ -164,43 +122,6 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
         animationController: widget.animationController,
       ),
     );
-    // listViews.add(
-    //   WechatView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 6, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
-    // listViews.add(
-    //   WechatNewView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 7, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
-    // listViews.add(
-    //   Wechat(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 8, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
-
-    // listViews.add(
-    //   MineOnlineServiceView(
-    //     animation: Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-    //         parent: widget.animationController,
-    //         curve:
-    //             Interval((1 / count) * 8, 1.0, curve: Curves.fastOutSlowIn))),
-    //     animationController: widget.animationController,
-    //   ),
-    // );
   }
 
   Future<bool> getData() async {
@@ -211,8 +132,9 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (BuildContext context) =>
-            getIt<MineBloc>()..add(const MineEvent.handleProcess()),
+        create: (BuildContext context) => getIt<MineBloc>()
+          ..add(const MineEvent.sendAuth())
+          ..add(const MineEvent.weChatAuthResponse()),
         child:
             BlocConsumer<MineBloc, MineState>(listener: (context, state) async {
           SharedPreferences sharedPreferences =
@@ -239,6 +161,13 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
           } else {
             _house = houseName;
           }
+          if (state.isAuthorization) {
+            if (state.unsubscribe) {
+              Navigator.push(context, DialogRouter(LoadingDialog(true)));
+            }
+          } else {
+            authorization();
+          }
         }, builder: (BuildContext context, state) {
           return Container(
             color: FitnessAppTheme.background,
@@ -247,7 +176,7 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
               body: Stack(
                 children: <Widget>[
                   getMainListViewUI(),
-                  getAppBarUI(),
+                  getAppBarUI(state),
                   SizedBox(
                     height: MediaQuery.of(context).padding.bottom,
                   )
@@ -285,7 +214,7 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
     );
   }
 
-  Widget getAppBarUI() {
+  Widget getAppBarUI(state) {
     return Column(
       children: <Widget>[
         AnimatedBuilder(
@@ -318,23 +247,22 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
                       Padding(
                         padding: EdgeInsets.only(
                             left: 16,
-                            right: 16,
+                            // right: 16,
                             top: 16 - 8.0 * topBarOpacity,
                             bottom: 12 - 8.0 * topBarOpacity),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+                          // mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
                             if (_cachedSignInUser != "")
                               InkWell(
                                 child: Container(
                                   width: 50,
                                   height: 50,
-                                  margin: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                                  margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(50.0),
                                     image: DecorationImage(
                                         image: NetworkImage(
-                                          // 'https://www.itying.com/images/flutter/7.png'
                                           jsonDecode(
                                               _cachedSignInUser)['headimgUrl'],
                                         ),
@@ -351,27 +279,23 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
                                 },
                               ),
                             if (_cachedSignInUser != "")
-                              Text(
-                                  // '刘聪',
-                                  jsonDecode(_cachedSignInUser)['realName'],
+                              Text(jsonDecode(_cachedSignInUser)['realName'],
                                   style: TextStyle(
                                       fontSize: 19.0,
                                       fontWeight: FontWeight.w500,
                                       color: Colors.grey[700])),
                             if (_cachedSignInUser != "")
                               Container(
-                                margin: EdgeInsets.only(left: 10.0),
-                                padding: EdgeInsets.all(1.0),
+                                margin: EdgeInsets.only(left: 8.0, top: 5.0),
+                                padding: EdgeInsets.fromLTRB(2, 1, 2, 1),
                                 decoration: BoxDecoration(
                                     border: Border.all(
-                                        width: 1.0, color: Colors.blue),
+                                        width: 0.8, color: Colors.blue),
                                     borderRadius: BorderRadius.circular(5.0)),
                                 child: Text(
-                                  // '置业顾问',
-                                  // jsonDecode(_cachedSignInUser)['userRole'],
                                   _userRole(),
                                   style: TextStyle(
-                                      color: Colors.blue, fontSize: 10),
+                                      color: Colors.blue, fontSize: 9),
                                 ),
                               ),
                             Expanded(child: Text("")),
@@ -402,6 +326,118 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
     );
   }
 
+  authorization() {
+    return showDialog(
+        barrierDismissible: true,
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            contentPadding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            title: Center(
+                child: Text("微信授权",
+                    style:
+                        TextStyle(fontSize: 16, fontWeight: FontWeight.w500))),
+            content: Container(
+              height: 120,
+              child: Column(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    width: 35,
+                    height: 35,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage(
+                            "assets/images/xkb.png",
+                          ),
+                          fit: BoxFit.cover),
+                    ),
+                    child: Text(""),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10),
+                    child: Text(
+                      "新客邦申请获取以下权限:",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: 10, bottom: 10),
+                    child: bottomLine(),
+                  ),
+                  Container(
+                      child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.circle,
+                        color: Colors.grey,
+                        size: 8,
+                      ),
+                      Text(
+                        "获得你的公开信息（昵称，头像等）",
+                        style: TextStyle(
+                            color: Colors.grey,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400),
+                      ),
+                    ],
+                  )),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              FlatButton(
+                child: Text("拒绝", style: TextStyle(color: Colors.grey[700])),
+                onPressed: () {
+                  Navigator.of(context).pop(false);
+                },
+              ),
+              FlatButton(
+                child: Text("允许"),
+                onPressed: () {
+                  Navigator.of(context).pop(true);
+                },
+              )
+            ],
+          );
+        }).then((value) async {
+      if (value != null && value) {
+        fluwx
+            .sendWeChatAuth(
+                scope: "snsapi_userinfo", state: "wechat_sdk_demo_test")
+            .then((data) {
+          // print(data);
+          if (data) {
+            BlocProvider.of<MineBloc>(context)
+              ..add(MineEvent.weChatAuthResponse());
+          }
+        });
+      }
+    });
+  }
+
+  centerLine() {
+    return Container(
+      height: 40.0,
+      decoration: BoxDecoration(
+        border: Border(left: BorderSide(width: 0.8, color: Colors.grey[300])),
+      ),
+      child: SizedBox(),
+    );
+  }
+
+  bottomLine() {
+    return Container(
+      width: 200.0,
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(width: 0.8, color: Colors.grey[300])),
+      ),
+      child: SizedBox(),
+    );
+  }
+
   String _userRole() {
     String userRole = '';
     String userInfo = jsonDecode(_cachedSignInUser)['userRole'];
@@ -424,4 +460,106 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
     }
     return userRole;
   }
+}
+
+class LoadingDialog extends Dialog {
+  LoadingDialog(this.canceledOnTouchOutside) : super();
+
+  ///点击背景是否能够退出
+  final bool canceledOnTouchOutside;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: new Material(
+
+          ///背景透明
+          color: Colors.transparent,
+
+          ///保证控件居中效果
+          child: Stack(
+            children: <Widget>[
+              GestureDetector(
+                ///点击事件
+                onTap: () {
+                  if (canceledOnTouchOutside) {
+                    Navigator.pop(context);
+                  }
+                },
+              ),
+              _dialog(context)
+            ],
+          )),
+    );
+  }
+
+  Widget _dialog(context) {
+    return Center(
+      child: Container(
+        width: 250.0,
+        height: 200.0,
+        decoration: ShapeDecoration(
+          color: Color(0xffffffff),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(
+              Radius.circular(8.0),
+            ),
+          ),
+        ),
+        child: Column(
+          children: <Widget>[
+            Container(
+              margin: EdgeInsets.only(top: 10, right: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  InkWell(
+                    child: Icon(Icons.cancel, color: Colors.blue, size: 22),
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                  )
+                ],
+              ),
+            ),
+            Container(
+              width: 130,
+              height: 130,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(
+                      "assets/images/erCode.png",
+                    ),
+                    fit: BoxFit.contain),
+              ),
+              child: Text(""),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2.0),
+              child: Text(
+                "关注公众号，获取流程通知",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class DialogRouter extends PageRouteBuilder {
+  final Widget page;
+
+  DialogRouter(this.page)
+      : super(
+          opaque: false,
+          barrierColor: Colors.black54,
+          pageBuilder: (context, animation, secondaryAnimation) => page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+              child,
+        );
 }

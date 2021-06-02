@@ -30,4 +30,5 @@ abstract class CoustomerEvent with _$CoustomerEvent {
   const factory CoustomerEvent.saveCustomerItem(
       Map<String, dynamic> coustomDataItem) = _SaveCustomerItem;
   const factory CoustomerEvent.getSalesman() = _GetSalesman;
+  const factory CoustomerEvent.resaveDataItem() = _ResaveDataItem;
 }

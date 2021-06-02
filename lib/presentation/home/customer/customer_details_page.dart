@@ -4,14 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ui/application/coustomer/coustomer_bloc.dart';
-import 'package:flutter_ui/application/message/bloc/web_scoket_bloc.dart';
 import 'package:flutter_ui/injection.dart';
 import 'package:flutter_ui/presentation/home/customer/data_information_page.dart';
 import 'package:flutter_ui/presentation/home/customer/follow_up_record_page.dart';
 import 'package:flutter_ui/presentation/home/customer/house_intention.dart';
-import 'package:flutter_ui/presentation/home/customer/referral_way_page.dart';
 import 'package:flutter_ui/presentation/routes/router.gr.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class CustomerDetails extends StatefulWidget {
   final Map<String, dynamic> listData;
@@ -38,6 +35,8 @@ class _CustomerDetailsState extends State<CustomerDetails> {
           // print(state.history);
           // print(state.historyVariable);
           print(state.history);
+          print(state);
+          print(widget.listData);
           // _listData = state.coustomData;
         }, builder: (context, state) {
           return WillPopScope(
@@ -58,24 +57,79 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                       new PopupMenuButton<String>(
                         itemBuilder: (BuildContext context) =>
                             <PopupMenuItem<String>>[
-                          if (widget.listData["workflowStatus"] == "2")
+                          if (state.coustomDataItem["workflowStatus"] == "2")
                             _selectView(Icons.lock_open, '解除冻结', 'A'),
-                          if (widget.listData["workflowStatus"] == "3")
+                          if (state.coustomDataItem["workflowStatus"] == "3")
                             _selectView(Icons.alarm_on, '提前执行', 'B'),
+                          // if (widget.listData["workflowStatus"] == "0" &&
+                          //     state.history[state.history.length - 1] &&
+                          //     (listdata["name"] ==
+                          //         currentlist["currentHandler"]) &&
+                          //     (listdata["taskDefinitionKey"] ==
+                          //             "CategoryManagent" ||
+                          //         listdata["taskDefinitionKey"] ==
+                          //             "Activity_0vv7s63" ||
+                          //         listdata["taskDefinitionKey"] ==
+                          //             "Activity_0qvod3g") &&
+                          //     currentlist["freeze"] == "0")
+                          if (state.coustomDataItem["workflowStatus"] == "0" &&
+                              state.coustomDataItem["currentHandler"] ==
+                                  state.history[state.history.length - 1]
+                                      ["name"] &&
+                              state.coustomDataItem["freeze"] == "0" &&
+                              (state.history[state.history.length - 1]
+                                          ["taskDefinitionKey"] ==
+                                      "CategoryManagent" ||
+                                  state.history[state.history.length - 1]
+                                          ["taskDefinitionKey"] ==
+                                      "Activity_0vv7s63" ||
+                                  state.history[state.history.length - 1]
+                                          ["taskDefinitionKey"] ==
+                                      "Activity_0qvod3g"))
+                            _selectView(Icons.alarm_on, '冻结', 'C'),
                         ],
-                        onSelected: (String action) {
+                        onSelected: (String action) async {
                           switch (action) {
                             case 'A':
                               BlocProvider.of<CoustomerBloc>(context)
                                 ..add(CoustomerEvent.unFreezedCustomer(
+                                    widget.listData["instanceId"]))
+                                ..add(CoustomerEvent.resaveDataItem())
+                                ..add(CoustomerEvent.gethistory(
+                                    widget.listData["instanceId"]))
+                                ..add(CoustomerEvent.gethistorydata(
                                     widget.listData["instanceId"]));
-                              BotToast.showText(text: '冻结已解除');
+                              BotToast.showText(text: '冻结已解除,请前往待办操作');
                               break;
                             case 'B':
                               BlocProvider.of<CoustomerBloc>(context)
                                 ..add(CoustomerEvent.executionWithoutdelay(
-                                    widget.listData['instanceId']));
+                                    widget.listData['instanceId']))
+                                ..add(CoustomerEvent.resaveDataItem())
+                                ..add(CoustomerEvent.gethistory(
+                                    widget.listData["instanceId"]))
+                                ..add(CoustomerEvent.gethistorydata(
+                                    widget.listData["instanceId"]));
                               BotToast.showText(text: '已提前执行');
+                              break;
+
+                            case 'C':
+                              // print(state);
+                              // print(widget.listData);
+                              print(
+                                  "_________________________________________________________________________");
+                              BlocProvider.of<CoustomerBloc>(context)
+                                ..add(CoustomerEvent.frezzeCoumer(
+                                    widget.listData["instanceId"]))
+                                ..add(CoustomerEvent.resaveDataItem())
+                                ..add(CoustomerEvent.gethistory(
+                                    widget.listData["instanceId"]))
+                                ..add(CoustomerEvent.gethistorydata(
+                                    widget.listData["instanceId"]));
+
+                              print(
+                                  "_________________________________________________________________________");
+                              BotToast.showText(text: '冻结已申请');
                               break;
                           }
                         },
@@ -130,12 +184,10 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                   ),
                   body: TabBarView(
                     children: <Widget>[
+                      state.history.length > 0 ? FollowUpRecord() : SizedBox(),
+                      HouseIntention(listData: state.coustomDataItem),
                       state.history.length > 0
-                          ? FollowUpRecord(listData: widget.listData)
-                          : SizedBox(),
-                      HouseIntention(listData: widget.listData),
-                      state.history.length > 0
-                          ? CustomerInformation(listData: widget.listData)
+                          ? CustomerInformation(listData: state.coustomDataItem)
                           : SizedBox(),
                       // ReferralWay(listData: listData),
                     ],
@@ -149,11 +201,18 @@ class _CustomerDetailsState extends State<CustomerDetails> {
     return PopupMenuItem<String>(
       value: id,
       // child: InkWell(
+      height: 10,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Icon(icon, color: Colors.blue),
-          Text(text),
+          Icon(
+            icon,
+            color: Colors.blue,
+            size: 2,
+          ),
+          Text(
+            text,
+          ),
         ],
       ),
       // onTap: () {

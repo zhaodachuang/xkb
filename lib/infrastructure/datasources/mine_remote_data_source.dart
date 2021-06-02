@@ -4,10 +4,10 @@ import 'dart:typed_data';
 
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+import 'package:flutter_ui/infrastructure/api/auth_rest_service.dart';
 import 'package:flutter_ui/infrastructure/api/result/api_result.dart';
 import 'package:flutter_ui/infrastructure/api/result/network_exceptions.dart';
 import 'package:flutter_ui/infrastructure/api/retro_rest_service.dart';
-import 'package:flutter_ui/presentation/home/message/process/save_image.dart';
 import 'package:injectable/injectable.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -16,8 +16,9 @@ abstract class MineRemoteDataSource {
   Future<Unit> handleProcess();
   Future<ApiResult> getErWeiCode();
   Future<ApiResult> submitInfo(String image, String nickName);
-
   Future<ApiResult> testVersion(String vInfo);
+  Future<ApiResult> sendAuth();
+  Future<ApiResult> submitOpenid(openid, unionid);
 }
 
 const CACHED_SIGN_IN_USER = 'CACHED_SIGN_IN_USER';
@@ -26,7 +27,9 @@ const CACHED_SIGN_IN_USER = 'CACHED_SIGN_IN_USER';
 class MineRemoteDataSourceImpl implements MineRemoteDataSource {
   final SharedPreferences sharedPreferences;
   final RetroRestService retroRestService;
-  MineRemoteDataSourceImpl(this.sharedPreferences, this.retroRestService);
+  final AuthRestService authRestService;
+  MineRemoteDataSourceImpl(
+      this.sharedPreferences, this.retroRestService, this.authRestService);
 
   @override
   Future<Unit> handleProcess() async {
@@ -141,6 +144,45 @@ class MineRemoteDataSourceImpl implements MineRemoteDataSource {
       // print(response);
       if (response['ok'] == true) {
         return ApiResult.success(data: response['data']);
+      }
+      return ApiResult.failure(
+          error: NetworkExceptions.getDioException('login failed'));
+    } catch (e) {
+      return ApiResult.failure(error: NetworkExceptions.getDioException(e));
+    }
+  }
+
+  @override
+  Future<ApiResult> sendAuth() async {
+    var user = await sharedPreferences.get("CACHED_SIGN_IN_USER");
+    String tenantId = jsonDecode(user)['tenantId'];
+    String userId = jsonDecode(user)["id"];
+    try {
+      final response = await retroRestService.sendAuth(userId, tenantId);
+      // print(response);
+      if (response['ok'] == true) {
+        return ApiResult.success(data: response);
+      }
+      return ApiResult.failure(
+          error: NetworkExceptions.getDioException('login failed'));
+    } catch (e) {
+      return ApiResult.failure(error: NetworkExceptions.getDioException(e));
+    }
+  }
+
+  @override
+  Future<ApiResult> submitOpenid(openid, unionid) async {
+    String cachedSignInUser = sharedPreferences.get('CACHED_SIGN_IN_USER');
+    Map<String, dynamic> map = jsonDecode(cachedSignInUser);
+    map['openId'] = openid;
+    map['unionId'] = unionid;
+    try {
+      final response = await retroRestService.submitInfo(map);
+      print(response);
+      if (response['ok'] == true) {
+        sharedPreferences.remove('CACHED_SIGN_IN_USER');
+        sharedPreferences.setString(CACHED_SIGN_IN_USER, json.encode(map));
+        return ApiResult.success(data: response['data'].toString());
       }
       return ApiResult.failure(
           error: NetworkExceptions.getDioException('login failed'));

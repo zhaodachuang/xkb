@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:fluwx/fluwx.dart';
 import 'package:jpush_flutter/jpush_flutter.dart';
 
 import 'package:flutter_ui/application/message/bloc/web_scoket_bloc.dart';
@@ -85,6 +86,17 @@ class _FitnessAppHomeScreenState extends State<FitnessAppHomeScreen>
       print("通知权限状态: $message");
     });
     // FlutterAppBadger.removeBadge(); //直接清除呢？
+    _initFluwx();
+  }
+
+  _initFluwx() async {
+    await registerWxApi(
+        appId: "wx900cb74137db2ad5",
+        doOnAndroid: true,
+        doOnIOS: true,
+        universalLink: "https://ad.kehuoa.com/xkb/app/");
+    var result = await isWeChatInstalled;
+    print("is installed $result");
   }
 
   @override

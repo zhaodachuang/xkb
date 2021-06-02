@@ -114,7 +114,10 @@ Future<GetIt> $initGetIt(
   gh.lazySingleton<MessagesDataSource>(
       () => MessagesDataSourceImpl(get<RetroRestService>()));
   gh.lazySingleton<MineRemoteDataSource>(() => MineRemoteDataSourceImpl(
-      get<SharedPreferences>(), get<RetroRestService>()));
+        get<SharedPreferences>(),
+        get<RetroRestService>(),
+        get<AuthRestService>(),
+      ));
   gh.lazySingleton<ProcessRemoteDataSource>(
       () => ProcessRemoteDataSourceImpl(get<RetroRestService>()));
   gh.factory<PropertyReviewsBloc>(() =>

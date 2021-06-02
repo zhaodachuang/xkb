@@ -41,7 +41,8 @@ class _PinCodeVerificationScreenState extends State<PinCodeVerificationScreen> {
   void initState() {
     onTapRecognizer = TapGestureRecognizer()
       ..onTap = () {
-        Navigator.pop(context);
+        // Navigator.pop(context);
+        ExtendedNavigator.of(context).replace(Routes.loginScreen);
       };
     errorController = StreamController<ErrorAnimationType>();
     super.initState();

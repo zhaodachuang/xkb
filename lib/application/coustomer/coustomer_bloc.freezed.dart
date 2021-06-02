@@ -128,6 +128,11 @@ class _$CoustomerEventTearOff {
   _GetSalesman getSalesman() {
     return const _GetSalesman();
   }
+
+// ignore: unused_element
+  _ResaveDataItem resaveDataItem() {
+    return const _ResaveDataItem();
+  }
 }
 
 /// @nodoc
@@ -157,6 +162,7 @@ mixin _$CoustomerEvent {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -178,6 +184,7 @@ mixin _$CoustomerEvent {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -199,6 +206,7 @@ mixin _$CoustomerEvent {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -219,6 +227,7 @@ mixin _$CoustomerEvent {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   });
 }
@@ -295,6 +304,7 @@ class _$_Started implements _Started {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -313,6 +323,7 @@ class _$_Started implements _Started {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return started();
   }
 
@@ -337,6 +348,7 @@ class _$_Started implements _Started {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -366,6 +378,7 @@ class _$_Started implements _Started {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -384,6 +397,7 @@ class _$_Started implements _Started {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return started(this);
   }
 
@@ -407,6 +421,7 @@ class _$_Started implements _Started {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -506,6 +521,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -524,6 +540,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return executionWithoutdelay(processIntanceId);
   }
 
@@ -548,6 +565,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -577,6 +595,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -595,6 +614,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return executionWithoutdelay(this);
   }
 
@@ -618,6 +638,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -716,6 +737,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -734,6 +756,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return gethistorydata(instanceId);
   }
 
@@ -758,6 +781,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -787,6 +811,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -805,6 +830,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return gethistorydata(this);
   }
 
@@ -828,6 +854,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -924,6 +951,7 @@ class _$_GetHistory implements _GetHistory {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -942,6 +970,7 @@ class _$_GetHistory implements _GetHistory {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return gethistory(instanceId);
   }
 
@@ -966,6 +995,7 @@ class _$_GetHistory implements _GetHistory {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -995,6 +1025,7 @@ class _$_GetHistory implements _GetHistory {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1013,6 +1044,7 @@ class _$_GetHistory implements _GetHistory {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return gethistory(this);
   }
 
@@ -1036,6 +1068,7 @@ class _$_GetHistory implements _GetHistory {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1133,6 +1166,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1151,6 +1185,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return unFreezedCustomer(processedId);
   }
 
@@ -1175,6 +1210,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1204,6 +1240,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1222,6 +1259,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return unFreezedCustomer(this);
   }
 
@@ -1245,6 +1283,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1341,6 +1380,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1359,6 +1399,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getSalesmanLists(affId);
   }
 
@@ -1383,6 +1424,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1412,6 +1454,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1430,6 +1473,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getSalesmanLists(this);
   }
 
@@ -1453,6 +1497,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1550,6 +1595,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1568,6 +1614,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return buyinghouse(listData);
   }
 
@@ -1592,6 +1639,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1621,6 +1669,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1639,6 +1688,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return buyinghouse(this);
   }
 
@@ -1662,6 +1712,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1736,6 +1787,7 @@ class _$GetContacts implements GetContacts {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1754,6 +1806,7 @@ class _$GetContacts implements GetContacts {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getContacts();
   }
 
@@ -1778,6 +1831,7 @@ class _$GetContacts implements GetContacts {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1807,6 +1861,7 @@ class _$GetContacts implements GetContacts {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1825,6 +1880,7 @@ class _$GetContacts implements GetContacts {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getContacts(this);
   }
 
@@ -1848,6 +1904,7 @@ class _$GetContacts implements GetContacts {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -1942,6 +1999,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -1960,6 +2018,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return frezzeCoumer(processedId);
   }
 
@@ -1984,6 +2043,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2013,6 +2073,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2031,6 +2092,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return frezzeCoumer(this);
   }
 
@@ -2054,6 +2116,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2179,6 +2242,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2197,6 +2261,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getProcessDefinition(name, phone, gender, description);
   }
 
@@ -2221,6 +2286,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2250,6 +2316,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2268,6 +2335,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getProcessDefinition(this);
   }
 
@@ -2291,6 +2359,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2403,6 +2472,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2421,6 +2491,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateRemarks(id, description);
   }
 
@@ -2445,6 +2516,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2474,6 +2546,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2492,6 +2565,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateRemarks(this);
   }
 
@@ -2515,6 +2589,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2623,6 +2698,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2641,6 +2717,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateCustomerName(id, customerName);
   }
 
@@ -2665,6 +2742,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2694,6 +2772,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2712,6 +2791,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateCustomerName(this);
   }
 
@@ -2735,6 +2815,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2843,6 +2924,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2861,6 +2943,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateCustomerPhone(id, phone);
   }
 
@@ -2885,6 +2968,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -2914,6 +2998,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -2932,6 +3017,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return updateCustomerPhone(this);
   }
 
@@ -2955,6 +3041,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3029,6 +3116,7 @@ class _$IsConfirm implements IsConfirm {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3047,6 +3135,7 @@ class _$IsConfirm implements IsConfirm {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return isConfirm();
   }
 
@@ -3071,6 +3160,7 @@ class _$IsConfirm implements IsConfirm {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3100,6 +3190,7 @@ class _$IsConfirm implements IsConfirm {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3118,6 +3209,7 @@ class _$IsConfirm implements IsConfirm {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return isConfirm(this);
   }
 
@@ -3141,6 +3233,7 @@ class _$IsConfirm implements IsConfirm {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3210,6 +3303,7 @@ class _$IsReset implements IsReset {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3228,6 +3322,7 @@ class _$IsReset implements IsReset {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return isReset();
   }
 
@@ -3252,6 +3347,7 @@ class _$IsReset implements IsReset {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3281,6 +3377,7 @@ class _$IsReset implements IsReset {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3299,6 +3396,7 @@ class _$IsReset implements IsReset {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return isReset(this);
   }
 
@@ -3322,6 +3420,7 @@ class _$IsReset implements IsReset {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3420,6 +3519,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3438,6 +3538,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return saveCustomerItem(coustomDataItem);
   }
 
@@ -3462,6 +3563,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3491,6 +3593,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3509,6 +3612,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return saveCustomerItem(this);
   }
 
@@ -3532,6 +3636,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3608,6 +3713,7 @@ class _$_GetSalesman implements _GetSalesman {
     @required Result isReset(),
     @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     @required Result getSalesman(),
+    @required Result resaveDataItem(),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3626,6 +3732,7 @@ class _$_GetSalesman implements _GetSalesman {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getSalesman();
   }
 
@@ -3650,6 +3757,7 @@ class _$_GetSalesman implements _GetSalesman {
     Result isReset(),
     Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
     Result getSalesman(),
+    Result resaveDataItem(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3679,6 +3787,7 @@ class _$_GetSalesman implements _GetSalesman {
     @required Result isReset(IsReset value),
     @required Result saveCustomerItem(_SaveCustomerItem value),
     @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
   }) {
     assert(started != null);
     assert(executionWithoutdelay != null);
@@ -3697,6 +3806,7 @@ class _$_GetSalesman implements _GetSalesman {
     assert(isReset != null);
     assert(saveCustomerItem != null);
     assert(getSalesman != null);
+    assert(resaveDataItem != null);
     return getSalesman(this);
   }
 
@@ -3720,6 +3830,7 @@ class _$_GetSalesman implements _GetSalesman {
     Result isReset(IsReset value),
     Result saveCustomerItem(_SaveCustomerItem value),
     Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -3732,6 +3843,196 @@ class _$_GetSalesman implements _GetSalesman {
 
 abstract class _GetSalesman implements CoustomerEvent {
   const factory _GetSalesman() = _$_GetSalesman;
+}
+
+/// @nodoc
+abstract class _$ResaveDataItemCopyWith<$Res> {
+  factory _$ResaveDataItemCopyWith(
+          _ResaveDataItem value, $Res Function(_ResaveDataItem) then) =
+      __$ResaveDataItemCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$ResaveDataItemCopyWithImpl<$Res>
+    extends _$CoustomerEventCopyWithImpl<$Res>
+    implements _$ResaveDataItemCopyWith<$Res> {
+  __$ResaveDataItemCopyWithImpl(
+      _ResaveDataItem _value, $Res Function(_ResaveDataItem) _then)
+      : super(_value, (v) => _then(v as _ResaveDataItem));
+
+  @override
+  _ResaveDataItem get _value => super._value as _ResaveDataItem;
+}
+
+/// @nodoc
+class _$_ResaveDataItem implements _ResaveDataItem {
+  const _$_ResaveDataItem();
+
+  @override
+  String toString() {
+    return 'CoustomerEvent.resaveDataItem()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is _ResaveDataItem);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result started(),
+    @required Result executionWithoutdelay(String processIntanceId),
+    @required Result gethistorydata(String instanceId),
+    @required Result gethistory(String instanceId),
+    @required Result unFreezedCustomer(String processedId),
+    @required Result getSalesmanLists(String affId),
+    @required Result buyinghouse(Map<String, dynamic> listData),
+    @required Result getContacts(),
+    @required Result frezzeCoumer(String processedId),
+    @required
+        Result getProcessDefinition(
+            String name, String phone, String gender, String description),
+    @required Result updateRemarks(String id, String description),
+    @required Result updateCustomerName(String id, String customerName),
+    @required Result updateCustomerPhone(String id, String phone),
+    @required Result isConfirm(),
+    @required Result isReset(),
+    @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
+    @required Result getSalesman(),
+    @required Result resaveDataItem(),
+  }) {
+    assert(started != null);
+    assert(executionWithoutdelay != null);
+    assert(gethistorydata != null);
+    assert(gethistory != null);
+    assert(unFreezedCustomer != null);
+    assert(getSalesmanLists != null);
+    assert(buyinghouse != null);
+    assert(getContacts != null);
+    assert(frezzeCoumer != null);
+    assert(getProcessDefinition != null);
+    assert(updateRemarks != null);
+    assert(updateCustomerName != null);
+    assert(updateCustomerPhone != null);
+    assert(isConfirm != null);
+    assert(isReset != null);
+    assert(saveCustomerItem != null);
+    assert(getSalesman != null);
+    assert(resaveDataItem != null);
+    return resaveDataItem();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result started(),
+    Result executionWithoutdelay(String processIntanceId),
+    Result gethistorydata(String instanceId),
+    Result gethistory(String instanceId),
+    Result unFreezedCustomer(String processedId),
+    Result getSalesmanLists(String affId),
+    Result buyinghouse(Map<String, dynamic> listData),
+    Result getContacts(),
+    Result frezzeCoumer(String processedId),
+    Result getProcessDefinition(
+        String name, String phone, String gender, String description),
+    Result updateRemarks(String id, String description),
+    Result updateCustomerName(String id, String customerName),
+    Result updateCustomerPhone(String id, String phone),
+    Result isConfirm(),
+    Result isReset(),
+    Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
+    Result getSalesman(),
+    Result resaveDataItem(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (resaveDataItem != null) {
+      return resaveDataItem();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result started(_Started value),
+    @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
+    @required Result gethistorydata(_GetHistoryData value),
+    @required Result gethistory(_GetHistory value),
+    @required Result unFreezedCustomer(_UnFreezedCustomer value),
+    @required Result getSalesmanLists(_GetSalesmanLists value),
+    @required Result buyinghouse(_BuyingHouse value),
+    @required Result getContacts(GetContacts value),
+    @required Result frezzeCoumer(_FrezzeCoumer value),
+    @required Result getProcessDefinition(GetProcessDefinition value),
+    @required Result updateRemarks(UpdateRemarks value),
+    @required Result updateCustomerName(UpdateCustomerName value),
+    @required Result updateCustomerPhone(UpdateCustomerPhone value),
+    @required Result isConfirm(IsConfirm value),
+    @required Result isReset(IsReset value),
+    @required Result saveCustomerItem(_SaveCustomerItem value),
+    @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
+  }) {
+    assert(started != null);
+    assert(executionWithoutdelay != null);
+    assert(gethistorydata != null);
+    assert(gethistory != null);
+    assert(unFreezedCustomer != null);
+    assert(getSalesmanLists != null);
+    assert(buyinghouse != null);
+    assert(getContacts != null);
+    assert(frezzeCoumer != null);
+    assert(getProcessDefinition != null);
+    assert(updateRemarks != null);
+    assert(updateCustomerName != null);
+    assert(updateCustomerPhone != null);
+    assert(isConfirm != null);
+    assert(isReset != null);
+    assert(saveCustomerItem != null);
+    assert(getSalesman != null);
+    assert(resaveDataItem != null);
+    return resaveDataItem(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result started(_Started value),
+    Result executionWithoutdelay(_ExecutionWithoutdelay value),
+    Result gethistorydata(_GetHistoryData value),
+    Result gethistory(_GetHistory value),
+    Result unFreezedCustomer(_UnFreezedCustomer value),
+    Result getSalesmanLists(_GetSalesmanLists value),
+    Result buyinghouse(_BuyingHouse value),
+    Result getContacts(GetContacts value),
+    Result frezzeCoumer(_FrezzeCoumer value),
+    Result getProcessDefinition(GetProcessDefinition value),
+    Result updateRemarks(UpdateRemarks value),
+    Result updateCustomerName(UpdateCustomerName value),
+    Result updateCustomerPhone(UpdateCustomerPhone value),
+    Result isConfirm(IsConfirm value),
+    Result isReset(IsReset value),
+    Result saveCustomerItem(_SaveCustomerItem value),
+    Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (resaveDataItem != null) {
+      return resaveDataItem(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ResaveDataItem implements CoustomerEvent {
+  const factory _ResaveDataItem() = _$_ResaveDataItem;
 }
 
 /// @nodoc

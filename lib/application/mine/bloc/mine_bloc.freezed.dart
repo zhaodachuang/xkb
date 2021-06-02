@@ -42,6 +42,29 @@ class _$MineEventTearOff {
       vInfo,
     );
   }
+
+// ignore: unused_element
+  SendAuth sendAuth() {
+    return const SendAuth();
+  }
+
+// ignore: unused_element
+  SubmitOpenid submitOpenid(String openid, String unionid) {
+    return SubmitOpenid(
+      openid,
+      unionid,
+    );
+  }
+
+// ignore: unused_element
+  SendWeChatAuth sendWeChatAuth() {
+    return const SendWeChatAuth();
+  }
+
+// ignore: unused_element
+  WeChatAuthResponse weChatAuthResponse() {
+    return const WeChatAuthResponse();
+  }
 }
 
 /// @nodoc
@@ -57,6 +80,10 @@ mixin _$MineEvent {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
@@ -65,6 +92,10 @@ mixin _$MineEvent {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   });
   @optionalTypeArgs
@@ -74,6 +105,10 @@ mixin _$MineEvent {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
@@ -82,6 +117,10 @@ mixin _$MineEvent {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   });
 }
@@ -144,12 +183,20 @@ class _$_HandleProcess implements _HandleProcess {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return handleProcess();
   }
 
@@ -161,6 +208,10 @@ class _$_HandleProcess implements _HandleProcess {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -178,12 +229,20 @@ class _$_HandleProcess implements _HandleProcess {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return handleProcess(this);
   }
 
@@ -195,6 +254,10 @@ class _$_HandleProcess implements _HandleProcess {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -252,12 +315,20 @@ class _$GetErWeiCode implements GetErWeiCode {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return getErWeiCode();
   }
 
@@ -269,6 +340,10 @@ class _$GetErWeiCode implements GetErWeiCode {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -286,12 +361,20 @@ class _$GetErWeiCode implements GetErWeiCode {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return getErWeiCode(this);
   }
 
@@ -303,6 +386,10 @@ class _$GetErWeiCode implements GetErWeiCode {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -358,12 +445,20 @@ class _$ShareCode implements ShareCode {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return shareCode();
   }
 
@@ -375,6 +470,10 @@ class _$ShareCode implements ShareCode {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -392,12 +491,20 @@ class _$ShareCode implements ShareCode {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return shareCode(this);
   }
 
@@ -409,6 +516,10 @@ class _$ShareCode implements ShareCode {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -497,12 +608,20 @@ class _$SubmitInfo implements SubmitInfo {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return submitInfo(image, nickName);
   }
 
@@ -514,6 +633,10 @@ class _$SubmitInfo implements SubmitInfo {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -531,12 +654,20 @@ class _$SubmitInfo implements SubmitInfo {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return submitInfo(this);
   }
 
@@ -548,6 +679,10 @@ class _$SubmitInfo implements SubmitInfo {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -630,12 +765,20 @@ class _$TestVersion implements TestVersion {
     @required Result shareCode(),
     @required Result submitInfo(String image, String nickName),
     @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return testVersion(vInfo);
   }
 
@@ -647,6 +790,10 @@ class _$TestVersion implements TestVersion {
     Result shareCode(),
     Result submitInfo(String image, String nickName),
     Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -664,12 +811,20 @@ class _$TestVersion implements TestVersion {
     @required Result shareCode(ShareCode value),
     @required Result submitInfo(SubmitInfo value),
     @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
   }) {
     assert(handleProcess != null);
     assert(getErWeiCode != null);
     assert(shareCode != null);
     assert(submitInfo != null);
     assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
     return testVersion(this);
   }
 
@@ -681,6 +836,10 @@ class _$TestVersion implements TestVersion {
     Result shareCode(ShareCode value),
     Result submitInfo(SubmitInfo value),
     Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
@@ -696,6 +855,568 @@ abstract class TestVersion implements MineEvent {
 
   String get vInfo;
   $TestVersionCopyWith<TestVersion> get copyWith;
+}
+
+/// @nodoc
+abstract class $SendAuthCopyWith<$Res> {
+  factory $SendAuthCopyWith(SendAuth value, $Res Function(SendAuth) then) =
+      _$SendAuthCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$SendAuthCopyWithImpl<$Res> extends _$MineEventCopyWithImpl<$Res>
+    implements $SendAuthCopyWith<$Res> {
+  _$SendAuthCopyWithImpl(SendAuth _value, $Res Function(SendAuth) _then)
+      : super(_value, (v) => _then(v as SendAuth));
+
+  @override
+  SendAuth get _value => super._value as SendAuth;
+}
+
+/// @nodoc
+class _$SendAuth implements SendAuth {
+  const _$SendAuth();
+
+  @override
+  String toString() {
+    return 'MineEvent.sendAuth()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is SendAuth);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result handleProcess(),
+    @required Result getErWeiCode(),
+    @required Result shareCode(),
+    @required Result submitInfo(String image, String nickName),
+    @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return sendAuth();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result handleProcess(),
+    Result getErWeiCode(),
+    Result shareCode(),
+    Result submitInfo(String image, String nickName),
+    Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (sendAuth != null) {
+      return sendAuth();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result handleProcess(_HandleProcess value),
+    @required Result getErWeiCode(GetErWeiCode value),
+    @required Result shareCode(ShareCode value),
+    @required Result submitInfo(SubmitInfo value),
+    @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return sendAuth(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result handleProcess(_HandleProcess value),
+    Result getErWeiCode(GetErWeiCode value),
+    Result shareCode(ShareCode value),
+    Result submitInfo(SubmitInfo value),
+    Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (sendAuth != null) {
+      return sendAuth(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SendAuth implements MineEvent {
+  const factory SendAuth() = _$SendAuth;
+}
+
+/// @nodoc
+abstract class $SubmitOpenidCopyWith<$Res> {
+  factory $SubmitOpenidCopyWith(
+          SubmitOpenid value, $Res Function(SubmitOpenid) then) =
+      _$SubmitOpenidCopyWithImpl<$Res>;
+  $Res call({String openid, String unionid});
+}
+
+/// @nodoc
+class _$SubmitOpenidCopyWithImpl<$Res> extends _$MineEventCopyWithImpl<$Res>
+    implements $SubmitOpenidCopyWith<$Res> {
+  _$SubmitOpenidCopyWithImpl(
+      SubmitOpenid _value, $Res Function(SubmitOpenid) _then)
+      : super(_value, (v) => _then(v as SubmitOpenid));
+
+  @override
+  SubmitOpenid get _value => super._value as SubmitOpenid;
+
+  @override
+  $Res call({
+    Object openid = freezed,
+    Object unionid = freezed,
+  }) {
+    return _then(SubmitOpenid(
+      openid == freezed ? _value.openid : openid as String,
+      unionid == freezed ? _value.unionid : unionid as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$SubmitOpenid implements SubmitOpenid {
+  const _$SubmitOpenid(this.openid, this.unionid)
+      : assert(openid != null),
+        assert(unionid != null);
+
+  @override
+  final String openid;
+  @override
+  final String unionid;
+
+  @override
+  String toString() {
+    return 'MineEvent.submitOpenid(openid: $openid, unionid: $unionid)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is SubmitOpenid &&
+            (identical(other.openid, openid) ||
+                const DeepCollectionEquality().equals(other.openid, openid)) &&
+            (identical(other.unionid, unionid) ||
+                const DeepCollectionEquality().equals(other.unionid, unionid)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(openid) ^
+      const DeepCollectionEquality().hash(unionid);
+
+  @override
+  $SubmitOpenidCopyWith<SubmitOpenid> get copyWith =>
+      _$SubmitOpenidCopyWithImpl<SubmitOpenid>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result handleProcess(),
+    @required Result getErWeiCode(),
+    @required Result shareCode(),
+    @required Result submitInfo(String image, String nickName),
+    @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return submitOpenid(openid, unionid);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result handleProcess(),
+    Result getErWeiCode(),
+    Result shareCode(),
+    Result submitInfo(String image, String nickName),
+    Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (submitOpenid != null) {
+      return submitOpenid(openid, unionid);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result handleProcess(_HandleProcess value),
+    @required Result getErWeiCode(GetErWeiCode value),
+    @required Result shareCode(ShareCode value),
+    @required Result submitInfo(SubmitInfo value),
+    @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return submitOpenid(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result handleProcess(_HandleProcess value),
+    Result getErWeiCode(GetErWeiCode value),
+    Result shareCode(ShareCode value),
+    Result submitInfo(SubmitInfo value),
+    Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (submitOpenid != null) {
+      return submitOpenid(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SubmitOpenid implements MineEvent {
+  const factory SubmitOpenid(String openid, String unionid) = _$SubmitOpenid;
+
+  String get openid;
+  String get unionid;
+  $SubmitOpenidCopyWith<SubmitOpenid> get copyWith;
+}
+
+/// @nodoc
+abstract class $SendWeChatAuthCopyWith<$Res> {
+  factory $SendWeChatAuthCopyWith(
+          SendWeChatAuth value, $Res Function(SendWeChatAuth) then) =
+      _$SendWeChatAuthCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$SendWeChatAuthCopyWithImpl<$Res> extends _$MineEventCopyWithImpl<$Res>
+    implements $SendWeChatAuthCopyWith<$Res> {
+  _$SendWeChatAuthCopyWithImpl(
+      SendWeChatAuth _value, $Res Function(SendWeChatAuth) _then)
+      : super(_value, (v) => _then(v as SendWeChatAuth));
+
+  @override
+  SendWeChatAuth get _value => super._value as SendWeChatAuth;
+}
+
+/// @nodoc
+class _$SendWeChatAuth implements SendWeChatAuth {
+  const _$SendWeChatAuth();
+
+  @override
+  String toString() {
+    return 'MineEvent.sendWeChatAuth()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is SendWeChatAuth);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result handleProcess(),
+    @required Result getErWeiCode(),
+    @required Result shareCode(),
+    @required Result submitInfo(String image, String nickName),
+    @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return sendWeChatAuth();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result handleProcess(),
+    Result getErWeiCode(),
+    Result shareCode(),
+    Result submitInfo(String image, String nickName),
+    Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (sendWeChatAuth != null) {
+      return sendWeChatAuth();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result handleProcess(_HandleProcess value),
+    @required Result getErWeiCode(GetErWeiCode value),
+    @required Result shareCode(ShareCode value),
+    @required Result submitInfo(SubmitInfo value),
+    @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return sendWeChatAuth(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result handleProcess(_HandleProcess value),
+    Result getErWeiCode(GetErWeiCode value),
+    Result shareCode(ShareCode value),
+    Result submitInfo(SubmitInfo value),
+    Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (sendWeChatAuth != null) {
+      return sendWeChatAuth(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SendWeChatAuth implements MineEvent {
+  const factory SendWeChatAuth() = _$SendWeChatAuth;
+}
+
+/// @nodoc
+abstract class $WeChatAuthResponseCopyWith<$Res> {
+  factory $WeChatAuthResponseCopyWith(
+          WeChatAuthResponse value, $Res Function(WeChatAuthResponse) then) =
+      _$WeChatAuthResponseCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class _$WeChatAuthResponseCopyWithImpl<$Res>
+    extends _$MineEventCopyWithImpl<$Res>
+    implements $WeChatAuthResponseCopyWith<$Res> {
+  _$WeChatAuthResponseCopyWithImpl(
+      WeChatAuthResponse _value, $Res Function(WeChatAuthResponse) _then)
+      : super(_value, (v) => _then(v as WeChatAuthResponse));
+
+  @override
+  WeChatAuthResponse get _value => super._value as WeChatAuthResponse;
+}
+
+/// @nodoc
+class _$WeChatAuthResponse implements WeChatAuthResponse {
+  const _$WeChatAuthResponse();
+
+  @override
+  String toString() {
+    return 'MineEvent.weChatAuthResponse()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) || (other is WeChatAuthResponse);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result handleProcess(),
+    @required Result getErWeiCode(),
+    @required Result shareCode(),
+    @required Result submitInfo(String image, String nickName),
+    @required Result testVersion(String vInfo),
+    @required Result sendAuth(),
+    @required Result submitOpenid(String openid, String unionid),
+    @required Result sendWeChatAuth(),
+    @required Result weChatAuthResponse(),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return weChatAuthResponse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result handleProcess(),
+    Result getErWeiCode(),
+    Result shareCode(),
+    Result submitInfo(String image, String nickName),
+    Result testVersion(String vInfo),
+    Result sendAuth(),
+    Result submitOpenid(String openid, String unionid),
+    Result sendWeChatAuth(),
+    Result weChatAuthResponse(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (weChatAuthResponse != null) {
+      return weChatAuthResponse();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result handleProcess(_HandleProcess value),
+    @required Result getErWeiCode(GetErWeiCode value),
+    @required Result shareCode(ShareCode value),
+    @required Result submitInfo(SubmitInfo value),
+    @required Result testVersion(TestVersion value),
+    @required Result sendAuth(SendAuth value),
+    @required Result submitOpenid(SubmitOpenid value),
+    @required Result sendWeChatAuth(SendWeChatAuth value),
+    @required Result weChatAuthResponse(WeChatAuthResponse value),
+  }) {
+    assert(handleProcess != null);
+    assert(getErWeiCode != null);
+    assert(shareCode != null);
+    assert(submitInfo != null);
+    assert(testVersion != null);
+    assert(sendAuth != null);
+    assert(submitOpenid != null);
+    assert(sendWeChatAuth != null);
+    assert(weChatAuthResponse != null);
+    return weChatAuthResponse(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result handleProcess(_HandleProcess value),
+    Result getErWeiCode(GetErWeiCode value),
+    Result shareCode(ShareCode value),
+    Result submitInfo(SubmitInfo value),
+    Result testVersion(TestVersion value),
+    Result sendAuth(SendAuth value),
+    Result submitOpenid(SubmitOpenid value),
+    Result sendWeChatAuth(SendWeChatAuth value),
+    Result weChatAuthResponse(WeChatAuthResponse value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (weChatAuthResponse != null) {
+      return weChatAuthResponse(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class WeChatAuthResponse implements MineEvent {
+  const factory WeChatAuthResponse() = _$WeChatAuthResponse;
 }
 
 /// @nodoc
@@ -717,6 +1438,12 @@ class _$MineStateTearOff {
       @required
           Map<String, dynamic> testVersion,
       @required
+          bool unsubscribe,
+      @required
+          bool isAuthorization,
+      @required
+          bool isSend,
+      @required
           Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption}) {
     return _MineState(
       processList: processList,
@@ -725,6 +1452,9 @@ class _$MineStateTearOff {
       shareCode: shareCode,
       submitInfo: submitInfo,
       testVersion: testVersion,
+      unsubscribe: unsubscribe,
+      isAuthorization: isAuthorization,
+      isSend: isSend,
       processFailureOrSuccessOption: processFailureOrSuccessOption,
     );
   }
@@ -742,6 +1472,9 @@ mixin _$MineState {
   List<dynamic> get shareCode;
   String get submitInfo;
   Map<String, dynamic> get testVersion;
+  bool get unsubscribe;
+  bool get isAuthorization;
+  bool get isSend;
   Option<Either<ValueFailure, Unit>> get processFailureOrSuccessOption;
 
   $MineStateCopyWith<MineState> get copyWith;
@@ -758,6 +1491,9 @@ abstract class $MineStateCopyWith<$Res> {
       List<dynamic> shareCode,
       String submitInfo,
       Map<String, dynamic> testVersion,
+      bool unsubscribe,
+      bool isAuthorization,
+      bool isSend,
       Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption});
 }
 
@@ -777,6 +1513,9 @@ class _$MineStateCopyWithImpl<$Res> implements $MineStateCopyWith<$Res> {
     Object shareCode = freezed,
     Object submitInfo = freezed,
     Object testVersion = freezed,
+    Object unsubscribe = freezed,
+    Object isAuthorization = freezed,
+    Object isSend = freezed,
     Object processFailureOrSuccessOption = freezed,
   }) {
     return _then(_value.copyWith(
@@ -794,6 +1533,12 @@ class _$MineStateCopyWithImpl<$Res> implements $MineStateCopyWith<$Res> {
       testVersion: testVersion == freezed
           ? _value.testVersion
           : testVersion as Map<String, dynamic>,
+      unsubscribe:
+          unsubscribe == freezed ? _value.unsubscribe : unsubscribe as bool,
+      isAuthorization: isAuthorization == freezed
+          ? _value.isAuthorization
+          : isAuthorization as bool,
+      isSend: isSend == freezed ? _value.isSend : isSend as bool,
       processFailureOrSuccessOption: processFailureOrSuccessOption == freezed
           ? _value.processFailureOrSuccessOption
           : processFailureOrSuccessOption as Option<Either<ValueFailure, Unit>>,
@@ -814,6 +1559,9 @@ abstract class _$MineStateCopyWith<$Res> implements $MineStateCopyWith<$Res> {
       List<dynamic> shareCode,
       String submitInfo,
       Map<String, dynamic> testVersion,
+      bool unsubscribe,
+      bool isAuthorization,
+      bool isSend,
       Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption});
 }
 
@@ -834,6 +1582,9 @@ class __$MineStateCopyWithImpl<$Res> extends _$MineStateCopyWithImpl<$Res>
     Object shareCode = freezed,
     Object submitInfo = freezed,
     Object testVersion = freezed,
+    Object unsubscribe = freezed,
+    Object isAuthorization = freezed,
+    Object isSend = freezed,
     Object processFailureOrSuccessOption = freezed,
   }) {
     return _then(_MineState(
@@ -851,6 +1602,12 @@ class __$MineStateCopyWithImpl<$Res> extends _$MineStateCopyWithImpl<$Res>
       testVersion: testVersion == freezed
           ? _value.testVersion
           : testVersion as Map<String, dynamic>,
+      unsubscribe:
+          unsubscribe == freezed ? _value.unsubscribe : unsubscribe as bool,
+      isAuthorization: isAuthorization == freezed
+          ? _value.isAuthorization
+          : isAuthorization as bool,
+      isSend: isSend == freezed ? _value.isSend : isSend as bool,
       processFailureOrSuccessOption: processFailureOrSuccessOption == freezed
           ? _value.processFailureOrSuccessOption
           : processFailureOrSuccessOption as Option<Either<ValueFailure, Unit>>,
@@ -867,6 +1624,9 @@ class _$_MineState implements _MineState {
       @required this.shareCode,
       @required this.submitInfo,
       @required this.testVersion,
+      @required this.unsubscribe,
+      @required this.isAuthorization,
+      @required this.isSend,
       @required this.processFailureOrSuccessOption})
       : assert(processList != null),
         assert(isAffId != null),
@@ -874,6 +1634,9 @@ class _$_MineState implements _MineState {
         assert(shareCode != null),
         assert(submitInfo != null),
         assert(testVersion != null),
+        assert(unsubscribe != null),
+        assert(isAuthorization != null),
+        assert(isSend != null),
         assert(processFailureOrSuccessOption != null);
 
   @override
@@ -889,11 +1652,17 @@ class _$_MineState implements _MineState {
   @override
   final Map<String, dynamic> testVersion;
   @override
+  final bool unsubscribe;
+  @override
+  final bool isAuthorization;
+  @override
+  final bool isSend;
+  @override
   final Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'MineState(processList: $processList, isAffId: $isAffId, getErWeiCode: $getErWeiCode, shareCode: $shareCode, submitInfo: $submitInfo, testVersion: $testVersion, processFailureOrSuccessOption: $processFailureOrSuccessOption)';
+    return 'MineState(processList: $processList, isAffId: $isAffId, getErWeiCode: $getErWeiCode, shareCode: $shareCode, submitInfo: $submitInfo, testVersion: $testVersion, unsubscribe: $unsubscribe, isAuthorization: $isAuthorization, isSend: $isSend, processFailureOrSuccessOption: $processFailureOrSuccessOption)';
   }
 
   @override
@@ -918,6 +1687,14 @@ class _$_MineState implements _MineState {
             (identical(other.testVersion, testVersion) ||
                 const DeepCollectionEquality()
                     .equals(other.testVersion, testVersion)) &&
+            (identical(other.unsubscribe, unsubscribe) ||
+                const DeepCollectionEquality()
+                    .equals(other.unsubscribe, unsubscribe)) &&
+            (identical(other.isAuthorization, isAuthorization) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAuthorization, isAuthorization)) &&
+            (identical(other.isSend, isSend) ||
+                const DeepCollectionEquality().equals(other.isSend, isSend)) &&
             (identical(other.processFailureOrSuccessOption,
                     processFailureOrSuccessOption) ||
                 const DeepCollectionEquality().equals(
@@ -934,6 +1711,9 @@ class _$_MineState implements _MineState {
       const DeepCollectionEquality().hash(shareCode) ^
       const DeepCollectionEquality().hash(submitInfo) ^
       const DeepCollectionEquality().hash(testVersion) ^
+      const DeepCollectionEquality().hash(unsubscribe) ^
+      const DeepCollectionEquality().hash(isAuthorization) ^
+      const DeepCollectionEquality().hash(isSend) ^
       const DeepCollectionEquality().hash(processFailureOrSuccessOption);
 
   @override
@@ -956,6 +1736,12 @@ abstract class _MineState implements MineState {
       @required
           Map<String, dynamic> testVersion,
       @required
+          bool unsubscribe,
+      @required
+          bool isAuthorization,
+      @required
+          bool isSend,
+      @required
           Option<Either<ValueFailure, Unit>>
               processFailureOrSuccessOption}) = _$_MineState;
 
@@ -971,6 +1757,12 @@ abstract class _MineState implements MineState {
   String get submitInfo;
   @override
   Map<String, dynamic> get testVersion;
+  @override
+  bool get unsubscribe;
+  @override
+  bool get isAuthorization;
+  @override
+  bool get isSend;
   @override
   Option<Either<ValueFailure, Unit>> get processFailureOrSuccessOption;
   @override

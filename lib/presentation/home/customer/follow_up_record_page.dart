@@ -1,14 +1,12 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_ui/presentation/home/customer/bottom_button.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_ui/application/coustomer/coustomer_bloc.dart';
-import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter_ui/presentation/routes/router.gr.dart';
 
 class FollowUpRecord extends StatefulWidget {
-  final Map<String, dynamic> listData;
-  FollowUpRecord({Key key, this.listData}) : super(key: key);
+  //  Map<String, dynamic> listData;
+  // FollowUpRecord({Key key, this.listData}) : super(key: key);
 
   @override
   _FollowUpRecordState createState() => _FollowUpRecordState();
@@ -16,12 +14,19 @@ class FollowUpRecord extends StatefulWidget {
 
 class _FollowUpRecordState extends State<FollowUpRecord> {
   int _currentStep = 0;
-
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocBuilder<CoustomerBloc, CoustomerState>(
+      body: BlocConsumer<CoustomerBloc, CoustomerState>(
+        listener: (context, state) {},
         builder: (context, state) {
+          if (this.count == 0 && state.history.length > 0) {
+            count++;
+            this._currentStep =
+                state.history.length > 0 ? state.history.length - 1 : 0;
+          }
+
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -35,6 +40,7 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
                     data: Theme.of(context)
                         .copyWith(primaryColor: Colors.blue[400]),
                     child: Stepper(
+                        key: Key("01"),
                         currentStep: _currentStep,
                         onStepTapped: (int value) {
                           // 点击步骤的序号触发的方法
@@ -71,41 +77,43 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
                             ],
                           );
                         },
-                        steps: _stepList(state.history, state.historyVariable,
-                            state.salesman, widget.listData, state.userInfo)
-                        // state.history.map((item) {
-                        //         return Step(
-                        //             title: step_title(item["startTime"], '去电',
-                        //                 '0', item["name"]),
-                        //             subtitle: Text('跟进人 刘聪'),
-                        //             content: step_content('预约9月3号盛世江尚看房'),
-                        //             isActive: _currentStep ==
-                        //                );
-                        //       }).toList()
+                        // steps: state.history.map((item) {
+                        //   return Step();
+                        // }).toList()
 
-                        //     [
-                        //   Step(
-                        //       title: step_title(
-                        //           '2020-09-07 10:35', '去电', '0', '约访'),
-                        //       subtitle: Text('跟进人 刘聪'),
-                        //       content: step_content('预约9月3号盛世江尚看房'),
-                        //       isActive: _currentStep == 0),
-                        //   Step(
-                        //     title:
-                        //         step_title('2020-08-28 15:05', '去电', '0', '无'),
-                        //     subtitle: Text('跟进人 刘聪'),
-                        //     content: step_content('预定下次看房时间'),
-                        //     // isActive: _currentStep == 1
-                        //   ),
-                        //   Step(
-                        //     title:
-                        //         step_title('2020-08-15 09:14', '去电', '0', '无'),
-                        //     subtitle: Text('跟进人 刘聪'),
-                        //     content: step_content('对盛世江尚感兴趣'),
-                        //     // isActive: _currentStep == 2
-                        //   ),
-                        // ]
-                        ),
+                        // _stepList(
+                        //     state.history,
+                        //     state.historyVariable,
+                        //     state.salesman,
+                        //     state.coustomDataItem,
+                        //     state.userInfo,
+                        //     context)
+                        steps: state.history.map((item) {
+                          return Step(
+                            title: step_title(getTime(item['startTime']), "",
+                                '0', item["name"]),
+                            subtitle: Text('跟进人 :' +
+                                getsalseman(item["assignee"], state.salesman)),
+                            content: Container(
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: getcontent(
+                                    item,
+                                    state.historyVariable,
+                                    state.coustomDataItem,
+                                    state.history.length - 1 ==
+                                            state.history.indexOf(item)
+                                        ? true
+                                        : false,
+                                    state.userInfo,
+                                    context),
+                              ),
+                            ),
+                            isActive:
+                                _currentStep == state.history.indexOf(item),
+                          );
+                        }).toList()),
                   ),
                 ),
               ),
@@ -139,7 +147,8 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
     return nowTime.substring(0, 19);
   }
 
-  List<Widget> getcontent(listdata, variable, currentlist, boolshow, userInfo) {
+  List<Widget> getcontent(
+      listdata, variable, currentlist, boolshow, userInfo, context) {
     List<Widget> res = [];
 
     for (var j = 0; j < variable.length; j++) {
@@ -181,94 +190,78 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
       //   res.add(variable[j]);
       // }
     }
-    if (currentlist["workflowStatus"] == "0" &&
-        boolshow &&
-        (listdata["name"] == currentlist["currentHandler"]) &&
-        (listdata["taskDefinitionKey"] == "CategoryManagent" ||
-            listdata["taskDefinitionKey"] == "Activity_0vv7s63" ||
-            listdata["taskDefinitionKey"] == "Activity_0qvod3g") &&
-        currentlist["freeze"] == "0") {
-      res.add(Container(
-        child: RaisedButton(
-          child: Text('冻结'),
-          onPressed: () {
-            showDialog(
-                context: context,
-                builder: (BuildContext context) {
-                  return new AlertDialog(
-                    title: Center(child: Text("温馨提示")),
-                    content: new SingleChildScrollView(
-                      child: new ListBody(
-                        children: <Widget>[
-                          new Text("您正在对该客户审请冻结"),
-                        ],
-                      ),
-                    ),
-                    actions: <Widget>[
-                      FlatButton(
-                        child: new Text("取消"),
-                        onPressed: () {
-                          Navigator.of(context).pop(false);
-                        },
-                      ),
-                      FlatButton(
-                        child: new Text("确定"),
-                        onPressed: () {
-                          // BlocProvider.of<ProcessedBloc>(context)
-                          //     .add(ProcessedEvent.pushProcessed());
-                          Navigator.of(context).pop(true);
-                          // _editParentText();
-                        },
-                      ),
-                    ],
-                  );
-                }).then((value) {
-              print(value);
-              if (value) {
-                print(currentlist);
-                BlocProvider.of<CoustomerBloc>(context)
-                  ..add(CoustomerEvent.frezzeCoumer(currentlist["instanceId"]));
+    // if (currentlist["workflowStatus"] == "0" &&
+    //     boolshow &&
+    //     (listdata["name"] == currentlist["currentHandler"]) &&
+    //     (listdata["taskDefinitionKey"] == "CategoryManagent" ||
+    //         listdata["taskDefinitionKey"] == "Activity_0vv7s63" ||
+    //         listdata["taskDefinitionKey"] == "Activity_0qvod3g") &&
+    //     currentlist["freeze"] == "0") {
+    //   res.add(Container(
+    //     child: RaisedButton(
+    //       child: Text('冻结'),
+    //       onPressed: () {
+    //         showDialog(
+    //             context: context,
+    //             builder: (BuildContext context) {
+    //               return new AlertDialog(
+    //                 title: Center(child: Text("温馨提示")),
+    //                 content: new SingleChildScrollView(
+    //                   child: new ListBody(
+    //                     children: <Widget>[
+    //                       new Text("您正在对该客户审请冻结"),
+    //                     ],
+    //                   ),
+    //                 ),
+    //                 actions: <Widget>[
+    //                   FlatButton(
+    //                     child: new Text("取消"),
+    //                     onPressed: () {
+    //                       Navigator.of(context).pop(false);
+    //                     },
+    //                   ),
+    //                   FlatButton(
+    //                     child: new Text("确定"),
+    //                     onPressed: () {
+    //                       // BlocProvider.of<ProcessedBloc>(context)
+    //                       //     .add(ProcessedEvent.pushProcessed());
+    //                       Navigator.of(context).pop(true);
+    //                       // _editParentText();
+    //                     },
+    //                   ),
+    //                 ],
+    //               );
+    //             }).then((value) {
+    //           print(value);
+    //           if (value) {
+    //             print(currentlist);
+    //             BlocProvider.of<CoustomerBloc>(context)
+    //               ..add(CoustomerEvent.frezzeCoumer(currentlist["instanceId"]));
 
-                BotToast.showText(text: "已申请。");
-              }
-            });
-          },
-        ),
-      ));
-    }
+    //             BotToast.showText(text: "已申请。");
+    //           }
+    //         });
+    //       },
+    //     ),
+    //   ));
+    // }
     if (boolshow &&
         currentlist["workflowStatus"] == "0" &&
         currentlist["salesmanId"] == userInfo["id"] &&
         listdata["assignee"] == userInfo["id"]) {
-      res.add(Container(
-        child: RaisedButton(
-          onPressed: () {
-            ExtendedNavigator.of(context).replace(Routes.needToDeal,
-                arguments: NeedToDealArguments(jumpProcessed: listdata));
-            // .then((value) {
-            // BlocProvider.of<CoustomerBloc>(context)
-            // ..add(CoustomerEvent.gethistorydata(
-            // widget.listData["instanceId"]));
-            // ..add(CoustomerEvent.gethistorydata(
-            //     widget.listData["instanceId"]))
-            // ..add(CoustomerEvent.getSalesmanLists(
-            //     widget.listData["affiliationId"]))
-            // ..add(CoustomerEvent.gethistory(widget.listData["instanceId"]))
-            // ..add(CoustomerEvent.getContacts());
-            // });
-
-            // ExtendedNavigator.of(context).replace(Routes.fitnessAppHomeScreen,
-            //     arguments: FitnessAppHomeScreenArguments(
-            //       msgPageTabIndex: 0,
-            //       processedId:'sss',
-            //     ));
-            // ExtendedNavigator.of(context).push(
-            //   Routes.messagePage,
-            // );
-            // arguments: )
-          },
-          child: Text("处理"),
-        ),
+      res.add(Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Container(
+            child: OutlineButton(
+              onPressed: () {
+                ExtendedNavigator.of(context).replace(Routes.needToDeal,
+                    arguments: NeedToDealArguments(jumpProcessed: listdata));
+              },
+              child: Text("立即跟进"),
+            ),
+          ),
+        ],
       ));
     }
     // variable.map((item) {
@@ -280,8 +273,16 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
     return res;
   }
 
-  List<Step> _stepList(list, variable, salesman, currentlist, userInfo) {
+  List<Step> _stepList(
+      list, variable, salesman, currentlist, userInfo, context) {
     List<Step> lis = [];
+    // state.history,
+    //                         state.historyVariable,
+    //                         state.salesman,
+    //                         state.coustomDataItem,
+    //                         state.userInfo,
+    //                         context
+    // List list =  state.history
     for (var i = 0; i < list.length; i++) {
       // print(variable);
 
@@ -289,13 +290,17 @@ class _FollowUpRecordState extends State<FollowUpRecord> {
           title: step_title(
               getTime(list[i]['startTime']), "", '0', list[i]["name"]),
           subtitle: Text('跟进人 :' + getsalseman(list[i]["assignee"], salesman)),
-          content: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: getcontent(list[i], variable, currentlist,
-                  list.length - 1 == i ? true : false, userInfo),
-            ),
+          content: BlocBuilder<CoustomerBloc, CoustomerState>(
+            builder: (context, state) {
+              return Container(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: getcontent(state.history[i], variable, currentlist,
+                      list.length - 1 == i ? true : false, userInfo, context),
+                ),
+              );
+            },
           ),
           isActive: list.length - 1 == i));
     }

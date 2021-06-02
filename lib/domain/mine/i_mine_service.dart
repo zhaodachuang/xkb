@@ -9,4 +9,8 @@ abstract class IMineService {
       String image, String nickName);
 
   Future<Either<WebScoketFailure, Map<String, dynamic>>> testVersion(vInfo);
+
+  Future<Either<WebScoketFailure, Map<String, dynamic>>> sendAuth();
+
+  Future<Either<WebScoketFailure, String>> submitOpenid(openid, unionid);
 }

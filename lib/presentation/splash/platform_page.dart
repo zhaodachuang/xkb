@@ -1,10 +1,6 @@
 import 'dart:async';
-// import 'dart:io';
 import 'dart:convert';
 import 'dart:io';
-// import 'package:permission_handler/permission_handler.dart';
-// import 'package:amap_flutter_location/amap_flutter_location.dart';
-// import 'package:amap_flutter_location/amap_location_option.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter_ui/application/wxpage/choose_tented/choosetented_bloc.dart';
@@ -517,7 +513,7 @@ class _ChooseTentedState extends State<ChooseTented> {
               maxLines: 1,
               textInputAction: TextInputAction.go,
               decoration: InputDecoration(
-                hintText: "搜索客户",
+                hintText: "搜索平台",
                 prefixIcon:
                     Icon(Icons.search, color: Colors.grey[400], size: 20),
                 border: InputBorder.none,

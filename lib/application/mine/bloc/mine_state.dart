@@ -9,6 +9,9 @@ abstract class MineState with _$MineState {
     @required List<dynamic> shareCode,
     @required String submitInfo,
     @required Map<String, dynamic> testVersion,
+    @required bool unsubscribe,
+    @required bool isAuthorization,
+    @required bool isSend,
     @required Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption,
   }) = _MineState;
 
@@ -20,5 +23,8 @@ abstract class MineState with _$MineState {
         shareCode: [],
         submitInfo: "",
         testVersion: {},
+        unsubscribe: false,
+        isAuthorization: false,
+        isSend: false,
       );
 }
