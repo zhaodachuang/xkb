@@ -13,6 +13,7 @@ abstract class MineState with _$MineState {
     @required bool isAuthorization,
     @required bool isSend,
     @required Option<Either<ValueFailure, Unit>> processFailureOrSuccessOption,
+    @required List matchPhone,
   }) = _MineState;
 
   factory MineState.initial() => MineState(
@@ -26,5 +27,6 @@ abstract class MineState with _$MineState {
         unsubscribe: false,
         isAuthorization: false,
         isSend: false,
+        matchPhone: [],
       );
 }

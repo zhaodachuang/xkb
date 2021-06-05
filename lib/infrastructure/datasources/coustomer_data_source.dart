@@ -53,7 +53,7 @@ class CoustomerDataSourceImpl implements CoustomerDataSource {
 
   @override
   Future getPersonnelList(String affId) async {
-    var res = await _restService.getPersonnelList(affId);
+    var res = await _restService.getSalesmanList(affId);
     return Future.value(res);
   }
 }

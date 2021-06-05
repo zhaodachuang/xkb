@@ -202,6 +202,17 @@ class CoustomerBloc extends Bloc<CoustomerEvent, CoustomerState> {
         // print(res);
         yield state.copyWith(history: res);
       },
+      gethistoryDeatils: (value) async* {
+        var query = {
+          "processInstanceId": value.instanceId,
+          "sortBy": "startTime",
+          "sortOrder": "asc"
+        };
+        var res = await _coustomerFacade.gethistory(query);
+        // print('gethistory————————————————');
+        // print(res);
+        yield state.copyWith(history: res);
+      },
       getSalesmanLists: (value) async* {
         // var salesmanList = await _iMessagesFacade.getSalesmanList(value.affId);
         var salesmanList = await _coustomerFacade.getPersonnelList(value.affId);

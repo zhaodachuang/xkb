@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
+import 'package:bot_toast/bot_toast.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter_ui/domain/core/failures.dart';
@@ -90,6 +91,9 @@ class MineBloc extends Bloc<MineEvent, MineState> {
           }
         });
         yield state.copyWith();
+      },
+      getMatchingPhone: (e) async* {
+        yield* _getMatchingPhone(_iMineService.getMatchingPhone(e.phone));
       },
     );
   }
@@ -196,17 +200,27 @@ class MineBloc extends Bloc<MineEvent, MineState> {
     );
   }
 
-  // Stream<MineState> _getAccessToken(
-  //   Future<Either<WebScoketFailure, Map<String, dynamic>>> forwardedCall,
-  // ) async* {
-  //   Map<String, dynamic> accessToken = {};
-  //   await forwardedCall.then((value) {
-  //     value.fold((l) {}, (r) {
-  //       accessToken = r;
-  //     });
-  //   });
-  //   yield state.copyWith(
-  //     accessToken: accessToken,
-  //   );
-  // }
+  Stream<MineState> _getMatchingPhone(
+    Future<Either<WebScoketFailure, Map<String, dynamic>>> forwardedCall,
+  ) async* {
+    Map<String, dynamic> map = {};
+    await forwardedCall.then((value) {
+      value.fold((l) {}, (r) {
+        map = r;
+      });
+    });
+    List list = map["data"];
+    List listPhone = [];
+    for (int i = 0; i < list.length; i++) {
+      if (!listPhone.contains(list[i]["phone"])) {
+        listPhone.add(list[i]["phone"]);
+      }
+    }
+    if (list.length == 0) {
+      BotToast.showText(text: "无此号码");
+    }
+    yield state.copyWith(
+      matchPhone: listPhone,
+    );
+  }
 }

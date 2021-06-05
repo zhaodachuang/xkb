@@ -246,7 +246,7 @@ class _AboutUsState extends State<AboutUs> {
               builder: (context) {
                 return AlertDialog(
                   title: Text("提示"),
-                  content: Text("电话:17362951060 邓先生"),
+                  content: Text("电话:18727351998 邓先生"),
                   actions: <Widget>[
                     FlatButton(
                       child:
@@ -258,7 +258,7 @@ class _AboutUsState extends State<AboutUs> {
                     FlatButton(
                       child: Text("确定"),
                       onPressed: () async {
-                        String url = 'tel:17362951060';
+                        String url = 'tel:18727351998';
                         //  'tel:13429824009';
                         if (await canLaunch(url)) {
                           await launch(url);
@@ -360,7 +360,8 @@ class _AboutUsState extends State<AboutUs> {
 
   void _updateVersion(testVersion) async {
     if (Platform.isIOS) {
-      String url = 'https://apps.apple.com/cn/app/testflight/id899247664';
+      String url =
+          'https://apps.apple.com/cn/app/%E6%96%B0%E5%AE%A2%E9%82%A6/id1561336770';
       if (await canLaunch(url)) {
         await launch(url);
       } else {

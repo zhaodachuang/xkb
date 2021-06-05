@@ -30,12 +30,12 @@ const HOUSESHORTCODE = "HOUSESHORTCODE";
 
 class _MineChangeProjectViewState extends State<MineChangeProjectView> {
   String houseName = "";
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    houseName = widget.house;
-  }
+  // @override
+  // void initState() {
+  //   // TODO: implement initState
+  //   super.initState();
+  //   houseName = widget.house;
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -83,7 +83,11 @@ class _MineChangeProjectViewState extends State<MineChangeProjectView> {
                             Container(
                               margin: EdgeInsets.only(right: 10),
                               child: Text(
-                                "  " + houseName + "  ",
+                                "  " +
+                                    (houseName != ""
+                                        ? houseName
+                                        : widget.house) +
+                                    "  ",
                                 maxLines: 1,
                                 style: TextStyle(
                                     fontSize: 15.0,

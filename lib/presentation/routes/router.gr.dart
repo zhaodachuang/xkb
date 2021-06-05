@@ -43,6 +43,7 @@ import '../home/mine/mine_achievement.dart';
 import '../home/mine/mine_order.dart';
 import '../home/mine/mine_setting_page.dart';
 import '../home/mine/ownership_scheme_page.dart';
+import '../home/mine/search_phone.dart';
 import '../home/mine/suggest_feedback.dart';
 import '../home/mine/wechat_page.dart';
 import '../login/login_page.dart';
@@ -145,6 +146,7 @@ class Routes {
   static const String wechatRecommendPage = '/wechat-recommend-page';
   static const String maps = '/Maps';
   static const String agreement = '/Agreement';
+  static const String searchPhone = '/search-phone';
   static const all = <String>{
     autoenter,
     platformPage,
@@ -211,6 +213,7 @@ class Routes {
     wechatRecommendPage,
     maps,
     agreement,
+    searchPhone,
   };
 }
 
@@ -284,6 +287,7 @@ class Router extends RouterBase {
     RouteDef(Routes.wechatRecommendPage, page: WechatRecommendPage),
     RouteDef(Routes.maps, page: Maps),
     RouteDef(Routes.agreement, page: Agreement),
+    RouteDef(Routes.searchPhone, page: SearchPhone),
   ];
   @override
   Map<Type, AutoRouteFactory> get pagesMap => _pagesMap;
@@ -875,6 +879,12 @@ class Router extends RouterBase {
         settings: data,
       );
     },
+    SearchPhone: (data) {
+      return MaterialPageRoute<dynamic>(
+        builder: (context) => SearchPhone(),
+        settings: data,
+      );
+    },
   };
 }
 
@@ -1301,6 +1311,8 @@ extension RouterExtendedNavigatorStateX on ExtendedNavigatorState {
         Routes.agreement,
         arguments: AgreementArguments(key: key, agreementKey: agreementKey),
       );
+
+  Future<dynamic> pushSearchPhone() => push<dynamic>(Routes.searchPhone);
 }
 
 /// ************************************************************************

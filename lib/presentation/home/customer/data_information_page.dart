@@ -22,7 +22,7 @@ class _CustomerInformationState extends State<CustomerInformation> {
   @override
   void initState() {
     BlocProvider.of<CoustomerBloc>(context)
-      ..add(CoustomerEvent.gethistory(widget.listData["instanceId"]));
+      ..add(CoustomerEvent.gethistoryDeatils(widget.listData["instanceId"]));
     super.initState();
   }
 

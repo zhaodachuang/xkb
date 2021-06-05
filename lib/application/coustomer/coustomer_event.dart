@@ -8,6 +8,8 @@ abstract class CoustomerEvent with _$CoustomerEvent {
   const factory CoustomerEvent.gethistorydata(String instanceId) =
       _GetHistoryData;
   const factory CoustomerEvent.gethistory(String instanceId) = _GetHistory;
+  const factory CoustomerEvent.gethistoryDeatils(String instanceId) =
+      _GetHistoryDeatils;
   const factory CoustomerEvent.unFreezedCustomer(String processedId) =
       _UnFreezedCustomer;
   const factory CoustomerEvent.getSalesmanLists(String affId) =

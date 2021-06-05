@@ -13,4 +13,7 @@ abstract class IMineService {
   Future<Either<WebScoketFailure, Map<String, dynamic>>> sendAuth();
 
   Future<Either<WebScoketFailure, String>> submitOpenid(openid, unionid);
+
+  Future<Either<WebScoketFailure, Map<String, dynamic>>> getMatchingPhone(
+      phone);
 }

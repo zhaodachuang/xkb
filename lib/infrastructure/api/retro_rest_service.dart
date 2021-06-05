@@ -261,6 +261,12 @@ abstract class RetroRestService {
     @Query("tenantId") String tenantId,
   );
 
+  @GET("/broker/mapi/br/referrals/matching")
+  Future getMatchingPhone(
+    @Query("phone") String phone,
+    @Query("tenantId") String tenantId,
+  );
+
   // @POST("/mapi/br/userinfo/affcode")
   // Future<dynamic> getAffCode(@Body() List<String> affIds);
 

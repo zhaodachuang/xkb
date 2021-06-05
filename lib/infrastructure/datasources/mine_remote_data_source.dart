@@ -19,6 +19,8 @@ abstract class MineRemoteDataSource {
   Future<ApiResult> testVersion(String vInfo);
   Future<ApiResult> sendAuth();
   Future<ApiResult> submitOpenid(openid, unionid);
+
+  Future<ApiResult> getMatchingPhone(phone);
 }
 
 const CACHED_SIGN_IN_USER = 'CACHED_SIGN_IN_USER';
@@ -183,6 +185,23 @@ class MineRemoteDataSourceImpl implements MineRemoteDataSource {
         sharedPreferences.remove('CACHED_SIGN_IN_USER');
         sharedPreferences.setString(CACHED_SIGN_IN_USER, json.encode(map));
         return ApiResult.success(data: response['data'].toString());
+      }
+      return ApiResult.failure(
+          error: NetworkExceptions.getDioException('login failed'));
+    } catch (e) {
+      return ApiResult.failure(error: NetworkExceptions.getDioException(e));
+    }
+  }
+
+  @override
+  Future<ApiResult> getMatchingPhone(phone) async {
+    String cachedSignInUser = sharedPreferences.get('CACHED_SIGN_IN_USER');
+    String tenantId = jsonDecode(cachedSignInUser)["tenantId"];
+    try {
+      final response = await retroRestService.getMatchingPhone(phone, tenantId);
+      print(response);
+      if (response['ok'] == true) {
+        return ApiResult.success(data: response);
       }
       return ApiResult.failure(
           error: NetworkExceptions.getDioException('login failed'));

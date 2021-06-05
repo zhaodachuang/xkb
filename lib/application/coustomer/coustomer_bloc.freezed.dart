@@ -40,6 +40,13 @@ class _$CoustomerEventTearOff {
   }
 
 // ignore: unused_element
+  _GetHistoryDeatils gethistoryDeatils(String instanceId) {
+    return _GetHistoryDeatils(
+      instanceId,
+    );
+  }
+
+// ignore: unused_element
   _UnFreezedCustomer unFreezedCustomer(String processedId) {
     return _UnFreezedCustomer(
       processedId,
@@ -147,6 +154,7 @@ mixin _$CoustomerEvent {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -170,6 +178,7 @@ mixin _$CoustomerEvent {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -193,6 +202,7 @@ mixin _$CoustomerEvent {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -214,6 +224,7 @@ mixin _$CoustomerEvent {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -289,6 +300,7 @@ class _$_Started implements _Started {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -310,6 +322,7 @@ class _$_Started implements _Started {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -334,6 +347,7 @@ class _$_Started implements _Started {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -365,6 +379,7 @@ class _$_Started implements _Started {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -384,6 +399,7 @@ class _$_Started implements _Started {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -408,6 +424,7 @@ class _$_Started implements _Started {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -506,6 +523,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -527,6 +545,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -551,6 +570,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -582,6 +602,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -601,6 +622,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -625,6 +647,7 @@ class _$_ExecutionWithoutdelay implements _ExecutionWithoutdelay {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -722,6 +745,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -743,6 +767,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -767,6 +792,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -798,6 +824,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -817,6 +844,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -841,6 +869,7 @@ class _$_GetHistoryData implements _GetHistoryData {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -936,6 +965,7 @@ class _$_GetHistory implements _GetHistory {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -957,6 +987,7 @@ class _$_GetHistory implements _GetHistory {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -981,6 +1012,7 @@ class _$_GetHistory implements _GetHistory {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -1012,6 +1044,7 @@ class _$_GetHistory implements _GetHistory {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -1031,6 +1064,7 @@ class _$_GetHistory implements _GetHistory {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1055,6 +1089,7 @@ class _$_GetHistory implements _GetHistory {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -1084,6 +1119,227 @@ abstract class _GetHistory implements CoustomerEvent {
 
   String get instanceId;
   _$GetHistoryCopyWith<_GetHistory> get copyWith;
+}
+
+/// @nodoc
+abstract class _$GetHistoryDeatilsCopyWith<$Res> {
+  factory _$GetHistoryDeatilsCopyWith(
+          _GetHistoryDeatils value, $Res Function(_GetHistoryDeatils) then) =
+      __$GetHistoryDeatilsCopyWithImpl<$Res>;
+  $Res call({String instanceId});
+}
+
+/// @nodoc
+class __$GetHistoryDeatilsCopyWithImpl<$Res>
+    extends _$CoustomerEventCopyWithImpl<$Res>
+    implements _$GetHistoryDeatilsCopyWith<$Res> {
+  __$GetHistoryDeatilsCopyWithImpl(
+      _GetHistoryDeatils _value, $Res Function(_GetHistoryDeatils) _then)
+      : super(_value, (v) => _then(v as _GetHistoryDeatils));
+
+  @override
+  _GetHistoryDeatils get _value => super._value as _GetHistoryDeatils;
+
+  @override
+  $Res call({
+    Object instanceId = freezed,
+  }) {
+    return _then(_GetHistoryDeatils(
+      instanceId == freezed ? _value.instanceId : instanceId as String,
+    ));
+  }
+}
+
+/// @nodoc
+class _$_GetHistoryDeatils implements _GetHistoryDeatils {
+  const _$_GetHistoryDeatils(this.instanceId) : assert(instanceId != null);
+
+  @override
+  final String instanceId;
+
+  @override
+  String toString() {
+    return 'CoustomerEvent.gethistoryDeatils(instanceId: $instanceId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _GetHistoryDeatils &&
+            (identical(other.instanceId, instanceId) ||
+                const DeepCollectionEquality()
+                    .equals(other.instanceId, instanceId)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(instanceId);
+
+  @override
+  _$GetHistoryDeatilsCopyWith<_GetHistoryDeatils> get copyWith =>
+      __$GetHistoryDeatilsCopyWithImpl<_GetHistoryDeatils>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required Result started(),
+    @required Result executionWithoutdelay(String processIntanceId),
+    @required Result gethistorydata(String instanceId),
+    @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
+    @required Result unFreezedCustomer(String processedId),
+    @required Result getSalesmanLists(String affId),
+    @required Result buyinghouse(Map<String, dynamic> listData),
+    @required Result getContacts(),
+    @required Result frezzeCoumer(String processedId),
+    @required
+        Result getProcessDefinition(
+            String name, String phone, String gender, String description),
+    @required Result updateRemarks(String id, String description),
+    @required Result updateCustomerName(String id, String customerName),
+    @required Result updateCustomerPhone(String id, String phone),
+    @required Result isConfirm(),
+    @required Result isReset(),
+    @required Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
+    @required Result getSalesman(),
+    @required Result resaveDataItem(),
+  }) {
+    assert(started != null);
+    assert(executionWithoutdelay != null);
+    assert(gethistorydata != null);
+    assert(gethistory != null);
+    assert(gethistoryDeatils != null);
+    assert(unFreezedCustomer != null);
+    assert(getSalesmanLists != null);
+    assert(buyinghouse != null);
+    assert(getContacts != null);
+    assert(frezzeCoumer != null);
+    assert(getProcessDefinition != null);
+    assert(updateRemarks != null);
+    assert(updateCustomerName != null);
+    assert(updateCustomerPhone != null);
+    assert(isConfirm != null);
+    assert(isReset != null);
+    assert(saveCustomerItem != null);
+    assert(getSalesman != null);
+    assert(resaveDataItem != null);
+    return gethistoryDeatils(instanceId);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result started(),
+    Result executionWithoutdelay(String processIntanceId),
+    Result gethistorydata(String instanceId),
+    Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
+    Result unFreezedCustomer(String processedId),
+    Result getSalesmanLists(String affId),
+    Result buyinghouse(Map<String, dynamic> listData),
+    Result getContacts(),
+    Result frezzeCoumer(String processedId),
+    Result getProcessDefinition(
+        String name, String phone, String gender, String description),
+    Result updateRemarks(String id, String description),
+    Result updateCustomerName(String id, String customerName),
+    Result updateCustomerPhone(String id, String phone),
+    Result isConfirm(),
+    Result isReset(),
+    Result saveCustomerItem(Map<String, dynamic> coustomDataItem),
+    Result getSalesman(),
+    Result resaveDataItem(),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (gethistoryDeatils != null) {
+      return gethistoryDeatils(instanceId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result started(_Started value),
+    @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
+    @required Result gethistorydata(_GetHistoryData value),
+    @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
+    @required Result unFreezedCustomer(_UnFreezedCustomer value),
+    @required Result getSalesmanLists(_GetSalesmanLists value),
+    @required Result buyinghouse(_BuyingHouse value),
+    @required Result getContacts(GetContacts value),
+    @required Result frezzeCoumer(_FrezzeCoumer value),
+    @required Result getProcessDefinition(GetProcessDefinition value),
+    @required Result updateRemarks(UpdateRemarks value),
+    @required Result updateCustomerName(UpdateCustomerName value),
+    @required Result updateCustomerPhone(UpdateCustomerPhone value),
+    @required Result isConfirm(IsConfirm value),
+    @required Result isReset(IsReset value),
+    @required Result saveCustomerItem(_SaveCustomerItem value),
+    @required Result getSalesman(_GetSalesman value),
+    @required Result resaveDataItem(_ResaveDataItem value),
+  }) {
+    assert(started != null);
+    assert(executionWithoutdelay != null);
+    assert(gethistorydata != null);
+    assert(gethistory != null);
+    assert(gethistoryDeatils != null);
+    assert(unFreezedCustomer != null);
+    assert(getSalesmanLists != null);
+    assert(buyinghouse != null);
+    assert(getContacts != null);
+    assert(frezzeCoumer != null);
+    assert(getProcessDefinition != null);
+    assert(updateRemarks != null);
+    assert(updateCustomerName != null);
+    assert(updateCustomerPhone != null);
+    assert(isConfirm != null);
+    assert(isReset != null);
+    assert(saveCustomerItem != null);
+    assert(getSalesman != null);
+    assert(resaveDataItem != null);
+    return gethistoryDeatils(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result started(_Started value),
+    Result executionWithoutdelay(_ExecutionWithoutdelay value),
+    Result gethistorydata(_GetHistoryData value),
+    Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
+    Result unFreezedCustomer(_UnFreezedCustomer value),
+    Result getSalesmanLists(_GetSalesmanLists value),
+    Result buyinghouse(_BuyingHouse value),
+    Result getContacts(GetContacts value),
+    Result frezzeCoumer(_FrezzeCoumer value),
+    Result getProcessDefinition(GetProcessDefinition value),
+    Result updateRemarks(UpdateRemarks value),
+    Result updateCustomerName(UpdateCustomerName value),
+    Result updateCustomerPhone(UpdateCustomerPhone value),
+    Result isConfirm(IsConfirm value),
+    Result isReset(IsReset value),
+    Result saveCustomerItem(_SaveCustomerItem value),
+    Result getSalesman(_GetSalesman value),
+    Result resaveDataItem(_ResaveDataItem value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (gethistoryDeatils != null) {
+      return gethistoryDeatils(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetHistoryDeatils implements CoustomerEvent {
+  const factory _GetHistoryDeatils(String instanceId) = _$_GetHistoryDeatils;
+
+  String get instanceId;
+  _$GetHistoryDeatilsCopyWith<_GetHistoryDeatils> get copyWith;
 }
 
 /// @nodoc
@@ -1151,6 +1407,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -1172,6 +1429,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1196,6 +1454,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -1227,6 +1486,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -1246,6 +1506,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1270,6 +1531,7 @@ class _$_UnFreezedCustomer implements _UnFreezedCustomer {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -1365,6 +1627,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -1386,6 +1649,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1410,6 +1674,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -1441,6 +1706,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -1460,6 +1726,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1484,6 +1751,7 @@ class _$_GetSalesmanLists implements _GetSalesmanLists {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -1580,6 +1848,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -1601,6 +1870,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1625,6 +1895,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -1656,6 +1927,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -1675,6 +1947,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1699,6 +1972,7 @@ class _$_BuyingHouse implements _BuyingHouse {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -1772,6 +2046,7 @@ class _$GetContacts implements GetContacts {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -1793,6 +2068,7 @@ class _$GetContacts implements GetContacts {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1817,6 +2093,7 @@ class _$GetContacts implements GetContacts {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -1848,6 +2125,7 @@ class _$GetContacts implements GetContacts {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -1867,6 +2145,7 @@ class _$GetContacts implements GetContacts {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -1891,6 +2170,7 @@ class _$GetContacts implements GetContacts {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -1984,6 +2264,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -2005,6 +2286,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2029,6 +2311,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -2060,6 +2343,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -2079,6 +2363,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2103,6 +2388,7 @@ class _$_FrezzeCoumer implements _FrezzeCoumer {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -2227,6 +2513,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -2248,6 +2535,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2272,6 +2560,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -2303,6 +2592,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -2322,6 +2612,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2346,6 +2637,7 @@ class _$GetProcessDefinition implements GetProcessDefinition {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -2457,6 +2749,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -2478,6 +2771,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2502,6 +2796,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -2533,6 +2828,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -2552,6 +2848,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2576,6 +2873,7 @@ class _$UpdateRemarks implements UpdateRemarks {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -2683,6 +2981,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -2704,6 +3003,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2728,6 +3028,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -2759,6 +3060,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -2778,6 +3080,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2802,6 +3105,7 @@ class _$UpdateCustomerName implements UpdateCustomerName {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -2909,6 +3213,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -2930,6 +3235,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -2954,6 +3260,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -2985,6 +3292,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3004,6 +3312,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3028,6 +3337,7 @@ class _$UpdateCustomerPhone implements UpdateCustomerPhone {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -3101,6 +3411,7 @@ class _$IsConfirm implements IsConfirm {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -3122,6 +3433,7 @@ class _$IsConfirm implements IsConfirm {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3146,6 +3458,7 @@ class _$IsConfirm implements IsConfirm {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -3177,6 +3490,7 @@ class _$IsConfirm implements IsConfirm {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3196,6 +3510,7 @@ class _$IsConfirm implements IsConfirm {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3220,6 +3535,7 @@ class _$IsConfirm implements IsConfirm {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -3288,6 +3604,7 @@ class _$IsReset implements IsReset {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -3309,6 +3626,7 @@ class _$IsReset implements IsReset {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3333,6 +3651,7 @@ class _$IsReset implements IsReset {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -3364,6 +3683,7 @@ class _$IsReset implements IsReset {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3383,6 +3703,7 @@ class _$IsReset implements IsReset {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3407,6 +3728,7 @@ class _$IsReset implements IsReset {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -3504,6 +3826,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -3525,6 +3848,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3549,6 +3873,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -3580,6 +3905,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3599,6 +3925,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3623,6 +3950,7 @@ class _$_SaveCustomerItem implements _SaveCustomerItem {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -3698,6 +4026,7 @@ class _$_GetSalesman implements _GetSalesman {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -3719,6 +4048,7 @@ class _$_GetSalesman implements _GetSalesman {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3743,6 +4073,7 @@ class _$_GetSalesman implements _GetSalesman {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -3774,6 +4105,7 @@ class _$_GetSalesman implements _GetSalesman {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3793,6 +4125,7 @@ class _$_GetSalesman implements _GetSalesman {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3817,6 +4150,7 @@ class _$_GetSalesman implements _GetSalesman {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),
@@ -3888,6 +4222,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     @required Result executionWithoutdelay(String processIntanceId),
     @required Result gethistorydata(String instanceId),
     @required Result gethistory(String instanceId),
+    @required Result gethistoryDeatils(String instanceId),
     @required Result unFreezedCustomer(String processedId),
     @required Result getSalesmanLists(String affId),
     @required Result buyinghouse(Map<String, dynamic> listData),
@@ -3909,6 +4244,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -3933,6 +4269,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     Result executionWithoutdelay(String processIntanceId),
     Result gethistorydata(String instanceId),
     Result gethistory(String instanceId),
+    Result gethistoryDeatils(String instanceId),
     Result unFreezedCustomer(String processedId),
     Result getSalesmanLists(String affId),
     Result buyinghouse(Map<String, dynamic> listData),
@@ -3964,6 +4301,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     @required Result executionWithoutdelay(_ExecutionWithoutdelay value),
     @required Result gethistorydata(_GetHistoryData value),
     @required Result gethistory(_GetHistory value),
+    @required Result gethistoryDeatils(_GetHistoryDeatils value),
     @required Result unFreezedCustomer(_UnFreezedCustomer value),
     @required Result getSalesmanLists(_GetSalesmanLists value),
     @required Result buyinghouse(_BuyingHouse value),
@@ -3983,6 +4321,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     assert(executionWithoutdelay != null);
     assert(gethistorydata != null);
     assert(gethistory != null);
+    assert(gethistoryDeatils != null);
     assert(unFreezedCustomer != null);
     assert(getSalesmanLists != null);
     assert(buyinghouse != null);
@@ -4007,6 +4346,7 @@ class _$_ResaveDataItem implements _ResaveDataItem {
     Result executionWithoutdelay(_ExecutionWithoutdelay value),
     Result gethistorydata(_GetHistoryData value),
     Result gethistory(_GetHistory value),
+    Result gethistoryDeatils(_GetHistoryDeatils value),
     Result unFreezedCustomer(_UnFreezedCustomer value),
     Result getSalesmanLists(_GetSalesmanLists value),
     Result buyinghouse(_BuyingHouse value),

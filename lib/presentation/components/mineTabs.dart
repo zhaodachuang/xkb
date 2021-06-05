@@ -50,6 +50,8 @@ class MineTabs extends StatelessWidget {
           ExtendedNavigator.of(context).push(Routes.wechatNoticePage);
         } else if (title == "微信小程序首页") {
           ExtendedNavigator.of(context).push(Routes.wechatHomeScreen);
+        } else if (title == "公共池号码查询") {
+          ExtendedNavigator.of(context).push(Routes.searchPhone);
         }
       },
     );

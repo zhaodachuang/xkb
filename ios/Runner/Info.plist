@@ -54,7 +54,7 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>App需要您的同意，才能访问持续定位</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App需要您的同意，才能访问定位服务</string>
+	<string>使用您的位置来向您推荐周边配套，城市定位等服务</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>App需要您的同意,才能访问麦克风</string>
 	<key>NSMotionUsageDescription</key>

@@ -13,4 +13,5 @@ abstract class MineEvent with _$MineEvent {
       SubmitOpenid;
   const factory MineEvent.sendWeChatAuth() = SendWeChatAuth;
   const factory MineEvent.weChatAuthResponse() = WeChatAuthResponse;
+  const factory MineEvent.getMatchingPhone(String phone) = GetMatchingPhone;
 }

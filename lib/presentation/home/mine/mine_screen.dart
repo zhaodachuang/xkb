@@ -10,6 +10,7 @@ import 'package:flutter_ui/presentation/home/ui_view/mine_about_us_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_achievement_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_aiCard_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_change_project_view.dart';
+import 'package:flutter_ui/presentation/home/ui_view/mine_search_phone_view.dart';
 import 'package:flutter_ui/presentation/home/ui_view/mine_suggest_feedback_view.dart';
 import 'package:flutter_ui/presentation/routes/router.gr.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -70,9 +71,11 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
     super.initState();
   }
 
-  void addAllListData() {
-    const int count = 5;
-
+  Future<void> addAllListData() async {
+    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
+    String _cachedSignInUser = sharedPreferences.get('CACHED_SIGN_IN_USER');
+    String userInfo = jsonDecode(_cachedSignInUser)['userRole'];
+    int count = 6;
     listViews.add(BlocBuilder<MineBloc, MineState>(builder: (context, state) {
       return MineChangeProjectView(
         house: _house,
@@ -122,6 +125,17 @@ class _MineScreenState extends State<MineScreen> with TickerProviderStateMixin {
         animationController: widget.animationController,
       ),
     );
+    if (userInfo != "salesman")
+      listViews.add(
+        MineSearchPhoneView(
+          animation: Tween<double>(begin: 0.0, end: 1.0).animate(
+              CurvedAnimation(
+                  parent: widget.animationController,
+                  curve: Interval((1 / count) * 6, 1.0,
+                      curve: Curves.fastOutSlowIn))),
+          animationController: widget.animationController,
+        ),
+      );
   }
 
   Future<bool> getData() async {
@@ -497,7 +511,7 @@ class LoadingDialog extends Dialog {
     return Center(
       child: Container(
         width: 250.0,
-        height: 200.0,
+        height: 220.0,
         decoration: ShapeDecoration(
           color: Color(0xffffffff),
           shape: RoundedRectangleBorder(
@@ -537,7 +551,17 @@ class LoadingDialog extends Dialog {
             Container(
               margin: EdgeInsets.only(top: 2.0),
               child: Text(
-                "关注公众号，获取流程通知",
+                "关注“新邦网络公众号”",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w500),
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 2.0),
+              child: Text(
+                "获取流程通知",
                 style: TextStyle(
                     color: Colors.blue,
                     fontSize: 15,

@@ -1745,7 +1745,7 @@ class _CustomerPageState extends State<CustomerPage> {
         theWay = "隐号推荐";
         break;
       case "3":
-        theWay = "隐号推荐";
+        theWay = "平台获客";
         break;
     }
     return theWay;

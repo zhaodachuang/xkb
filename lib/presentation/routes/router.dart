@@ -31,6 +31,7 @@ import 'package:flutter_ui/presentation/home/mine/mine_achievement.dart';
 import 'package:flutter_ui/presentation/home/mine/mine_order.dart';
 import 'package:flutter_ui/presentation/home/mine/mine_setting_page.dart';
 import 'package:flutter_ui/presentation/home/mine/ownership_scheme_page.dart';
+import 'package:flutter_ui/presentation/home/mine/search_phone.dart';
 import 'package:flutter_ui/presentation/home/mine/suggest_feedback.dart';
 import 'package:flutter_ui/presentation/home/mine/wechat_page.dart';
 import 'package:flutter_ui/presentation/login/login_page.dart';
@@ -133,6 +134,7 @@ import 'package:flutter_ui/presentation/splash/platform_page.dart';
     MaterialRoute(page: WechatRecommendPage),
     MaterialRoute(page: Maps),
     MaterialRoute(page: Agreement),
+    MaterialRoute(page: SearchPhone),
   ],
 )
 class $Router {}

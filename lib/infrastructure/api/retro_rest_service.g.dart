@@ -1024,4 +1024,26 @@ class _RetroRestService implements RetroRestService {
     final value = _result.data;
     return value;
   }
+
+  @override
+  Future<dynamic> getMatchingPhone(phone, tenantId) async {
+    ArgumentError.checkNotNull(phone, 'phone');
+    ArgumentError.checkNotNull(tenantId, 'tenantId');
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'phone': phone,
+      r'tenantId': tenantId
+    };
+    final _data = <String, dynamic>{};
+    final _result = await _dio.request('/broker/mapi/br/referrals/matching',
+        queryParameters: queryParameters,
+        options: RequestOptions(
+            method: 'GET',
+            headers: <String, dynamic>{},
+            extra: _extra,
+            baseUrl: baseUrl),
+        data: _data);
+    final value = _result.data;
+    return value;
+  }
 }

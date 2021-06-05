@@ -123,4 +123,26 @@ class MineService implements IMineService {
       return left(const WebScoketFailure.serverError());
     }
   }
+
+  @override
+  Future<Either<WebScoketFailure, Map<String, dynamic>>> getMatchingPhone(
+      phone) async {
+    var apiResult = await mineRemoteDataSource.getMatchingPhone(phone);
+    Map<String, dynamic> matchPhone = {};
+    try {
+      bool successAndFailure = false;
+      apiResult.when(
+          success: (right) {
+            successAndFailure = true;
+            matchPhone = right;
+          },
+          failure: (error) => successAndFailure = false);
+      return successAndFailure
+          ? right(matchPhone)
+          : left(const WebScoketFailure.receiveMessageFail());
+    } on Exception catch (error) {
+      print("error is :: " + error.toString());
+      return left(const WebScoketFailure.serverError());
+    }
+  }
 }
