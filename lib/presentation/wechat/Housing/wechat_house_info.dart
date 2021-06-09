@@ -180,13 +180,19 @@ class _WechatHouseInfoState extends State<WechatHouseInfo> {
                             children: [
                               houseData(
                                   "规划面积:",
-                                  (double.parse(state.houseInfo["coverArea"]) /
+                                  (double.parse(state.houseInfo["coverArea"] !=
+                                                      ""
+                                                  ? state.houseInfo["coverArea"]
+                                                  : "0") /
                                               10000)
                                           .toStringAsFixed(2) +
                                       "万m²"),
                               houseData(
                                   "建筑面积:",
-                                  (double.parse(state.houseInfo["floorArea"]) /
+                                  (double.parse(state.houseInfo["floorArea"] !=
+                                                      ""
+                                                  ? state.houseInfo["floorArea"]
+                                                  : "0") /
                                               10000)
                                           .toStringAsFixed(2) +
                                       "万m²")
