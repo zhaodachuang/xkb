@@ -55,45 +55,17 @@ class _AssessViewState extends State<AssessView> {
                               ),
                             ),
                             onTap: () async {
-                              print("123");
-
                               Navigator.of(context).pop(pf[i]);
                             },
                           ))),
-              // ListTile(
-              //   title: Text('新增',
-              //       textAlign: TextAlign.center,
-              //       style: TextStyle(color: Colors.blue)),
-              //   onTap: () {
-              //     showDialog(
-              //         barrierDismissible: true,
-              //         context: context,
-              //         builder: (context) {
-              //           return AlertDialog(
-              //             title: Text("提示"),
-              //             content: TextField(
-              //               maxLines: 5,
-              //               minLines: 1,
-              //               textInputAction: TextInputAction.go,
-              //               decoration: InputDecoration(
-              //                 hintText: '请输入内容(不能用新增吧)',
-              //                 border: InputBorder.none,
-              //                 isDense: true,
-              //                 hintStyle: TextStyle(color: Colors.grey[400]),
-              //               ),
-              //             ),
-              //             actions: <Widget>[
-              //               FlatButton(
-              //                 child: Text("确定"),
-              //                 onPressed: () {
-              //                   Navigator.of(context).pop(true);
-              //                 },
-              //               )
-              //             ],
-              //           );
-              //         });
-              //   },
-              // ),
+              ListTile(
+                title: Text('重置',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.blue)),
+                onTap: () {
+                  Navigator.of(context).pop("重置");
+                },
+              ),
               ListTile(
                 title: Text('取消',
                     textAlign: TextAlign.center,
@@ -117,7 +89,9 @@ class _AssessViewState extends State<AssessView> {
         }
         BlocProvider.of<ProcessedBloc>(context)
             .add(ProcessedEvent.saveRate(value));
-      } else if (value == '取消') {
+      } else if (value == '重置') {
+        BlocProvider.of<ProcessedBloc>(context)
+            .add(ProcessedEvent.saveRate("重置"));
         setState(() {
           rate = "选择等级";
         });

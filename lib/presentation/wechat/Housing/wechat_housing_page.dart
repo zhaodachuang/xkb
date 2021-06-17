@@ -15,8 +15,6 @@ import 'package:flutter_ui/presentation/home/message/processed/processed_photo_v
 import 'package:flutter_ui/presentation/home/message/processed/processed_photoshow_view.dart';
 import 'package:flutter_ui/presentation/routes/router.gr.dart';
 import 'package:flutter_ui/application/wxpage/wechat_home_page/wechathomepage_bloc.dart';
-import 'package:flutter_ui/presentation/wechat/Housing/wechat_news_information.dart';
-import 'package:ota_update/generated/i18n.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 

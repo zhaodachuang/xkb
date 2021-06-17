@@ -503,42 +503,6 @@ class _ProcessedCustomViewState extends State<ProcessedCustomView> {
                             ))
                           ],
                         ),
-                        if (widget.action == '2')
-                          Row(children: [
-                            Text("备注:",
-                                style: TextStyle(
-                                  color: Colors.grey[700],
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w500,
-                                )),
-                            SizedBox(width: 10),
-                            Expanded(
-                                child: SingleChildScrollView(
-                              physics: BouncingScrollPhysics(),
-                              scrollDirection: Axis.horizontal,
-                              controller: ScrollController(),
-                              child: Text(
-                                  (state.processedData
-                                              .containsKey("description") &&
-                                          state.processedData["description"]
-                                                  ["value"] !=
-                                              null)
-                                      ? (state.processedData
-                                                  .containsKey("description") &&
-                                              state.processedData["description"]
-                                                      ["value"] !=
-                                                  "")
-                                          ? state.processedData["description"]
-                                              ["value"]
-                                          : "无"
-                                      : "无",
-                                  maxLines: 1,
-                                  style: TextStyle(
-                                      color: Colors.grey[600],
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w500)),
-                            ))
-                          ]),
                         Row(
                           children: <Widget>[
                             Text('电话:',
@@ -700,7 +664,43 @@ class _ProcessedCustomViewState extends State<ProcessedCustomView> {
                                 ),
                               )
                             ],
-                          )
+                          ),
+                        if (widget.action == '1')
+                          Row(children: [
+                            Text("备注:",
+                                style: TextStyle(
+                                  color: Colors.grey[700],
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                )),
+                            SizedBox(width: 10),
+                            Expanded(
+                                child: SingleChildScrollView(
+                              physics: BouncingScrollPhysics(),
+                              scrollDirection: Axis.horizontal,
+                              controller: ScrollController(),
+                              child: Text(
+                                  (state.processedData
+                                              .containsKey("description") &&
+                                          state.processedData["description"]
+                                                  ["value"] !=
+                                              null)
+                                      ? (state.processedData
+                                                  .containsKey("description") &&
+                                              state.processedData["description"]
+                                                      ["value"] !=
+                                                  "")
+                                          ? state.processedData["description"]
+                                              ["value"]
+                                          : "无"
+                                      : "无",
+                                  maxLines: 1,
+                                  style: TextStyle(
+                                      color: Colors.grey[600],
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w500)),
+                            ))
+                          ]),
                       ],
                     ));
 

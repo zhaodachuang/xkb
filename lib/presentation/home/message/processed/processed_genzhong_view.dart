@@ -48,7 +48,18 @@ class _GenzhongState extends State<Genzhong> {
                     ..add(ProcessedEvent.changefollowState());
                 },
                 value: this.valueb,
-              )
+              ),
+              if (valueb)
+                Container(
+                  margin: EdgeInsets.only(left: 5),
+                  child: Text(
+                    "(周期性回访客户)",
+                    style: TextStyle(
+                        color: Colors.red,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500),
+                  ),
+                )
             ],
           ),
         ]);

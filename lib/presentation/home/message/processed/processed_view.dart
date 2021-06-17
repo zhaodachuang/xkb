@@ -7,6 +7,7 @@ import 'package:flutter_ui/presentation/core/fintness_app_theme.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_assess_view.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_beizhu_view.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_choose_house_view.dart';
+import 'package:flutter_ui/presentation/home/message/processed/processed_choose_sec_view.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_choose_view.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_genzhong_view.dart';
 import 'package:flutter_ui/presentation/home/message/processed/processed_m_assess_view.dart';
@@ -52,7 +53,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                     children: [
                       Container(
                         child: Text(
-                          '当前流程:',
+                          '待办流程:',
                           style: TextStyle(
                             fontFamily: FitnessAppTheme.fontName,
                             fontWeight: FontWeight.w500,
@@ -84,7 +85,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                 /**
                  * 
                 */
-                ChooseView(),
+                ChooseSecView(),
                 // Row(
                 //   mainAxisAlignment: MainAxisAlignment.center,
                 //   children: <Widget>[
@@ -131,7 +132,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                       children: [
                         Container(
                           child: Text(
-                            '当前流程:',
+                            '待办流程:',
                             style: TextStyle(
                               fontFamily: FitnessAppTheme.fontName,
                               fontWeight: FontWeight.w500,
@@ -218,8 +219,8 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                     MassessView(
                         state.processedData["Activity_1vkay0h_managerDeration"]
                             ["value"]),
-                  if (!state.isUseDate) Genzhong(),
-                  if (!state.followState) NextRemindView(),
+                  if (!state.isUseDate && !state.isprocess) Genzhong(),
+                  if (!state.followState && !state.isprocess) NextRemindView(),
                   if (state.processedItem["taskDefinitionKey"] !=
                       "Activity_0qvod3g")
                     AssessView(),
@@ -664,7 +665,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                     children: [
                       Container(
                         child: Text(
-                          '当前流程:',
+                          '待办流程:',
                           style: TextStyle(
                             // fontSize: 16, fontWeight: FontWeight.w500
                             fontFamily: FitnessAppTheme.fontName,
@@ -1195,7 +1196,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                       children: [
                         Container(
                           child: Text(
-                            '当前流程:',
+                            '待办流程:',
                             style: TextStyle(
                               // fontSize: 15, fontWeight: FontWeight.w500
                               fontFamily: FitnessAppTheme.fontName,
@@ -1248,7 +1249,7 @@ class _ProcessedsViewState extends State<ProcessedsView> {
                     children: [
                       Container(
                         child: Text(
-                          '当前流程:',
+                          '待办流程:',
                           style: TextStyle(
                             // fontSize: 15, fontWeight: FontWeight.w500
                             fontFamily: FitnessAppTheme.fontName,

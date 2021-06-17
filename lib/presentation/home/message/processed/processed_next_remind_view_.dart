@@ -212,6 +212,14 @@ class _NextRemindViewState extends State<NextRemindView> {
                                     height: 20,
                                   ),
                                   ListTile(
+                                    title: Text('重置',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(color: Colors.blue)),
+                                    onTap: () {
+                                      Navigator.of(context).pop("重置");
+                                    },
+                                  ),
+                                  ListTile(
                                     title: Text('取消',
                                         textAlign: TextAlign.center,
                                         style:
@@ -223,15 +231,23 @@ class _NextRemindViewState extends State<NextRemindView> {
                                 ],
                               );
                             }).then((value) {
-                          print(value);
-                          var stringValue = value.toString().split("");
-                          print(stringValue);
-                          if (stringValue[stringValue.length - 1] == '天') {
+                          if (value == "重置") {
                             BlocProvider.of<ProcessedBloc>(context)
-                                .add(ProcessedEvent.saveNextDate(value));
+                                .add(ProcessedEvent.saveNextDate("0"));
                             setState(() {
-                              nextTime = value;
+                              nextTime = "选择时间";
                             });
+                          } else {
+                            print(value);
+                            var stringValue = value.toString().split("");
+                            print(stringValue);
+                            if (stringValue[stringValue.length - 1] == '天') {
+                              BlocProvider.of<ProcessedBloc>(context)
+                                  .add(ProcessedEvent.saveNextDate(value));
+                              setState(() {
+                                nextTime = value;
+                              });
+                            }
                           }
                         });
                       }),

@@ -1955,7 +1955,11 @@ class ProcessedBloc extends Bloc<ProcessedEvent, ProcessedState> {
       saveRate: (value) async* {
         print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         print(value.rate);
-        yield state.copyWith(rate: value.rate);
+        if (value.rate == "重置") {
+          yield state.copyWith(rate: "");
+        } else {
+          yield state.copyWith(rate: value.rate);
+        }
       },
       savePS: (value) async* {
         yield state.copyWith(ps: value.ps);
@@ -2044,13 +2048,20 @@ class ProcessedBloc extends Bloc<ProcessedEvent, ProcessedState> {
       },
       saveNextDate: (value) async* {
         String nextDate = value.date;
-        var stringTime = nextDate.replaceAll(RegExp("[^0-9]"), "");
-        print(nextDate);
-        print(stringTime);
-        yield state.copyWith(
-          nextDate: stringTime,
-          isUseDate: true,
-        );
+        if (nextDate == "0") {
+          yield state.copyWith(
+            nextDate: "",
+            isUseDate: false,
+          );
+        } else {
+          var stringTime = nextDate.replaceAll(RegExp("[^0-9]"), "");
+          print(nextDate);
+          print(stringTime);
+          yield state.copyWith(
+            nextDate: stringTime,
+            isUseDate: true,
+          );
+        }
       },
       saveHouseData: (value) async* {
         print(value);
