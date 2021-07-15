@@ -92,10 +92,10 @@ class _HouseIntentionState extends State<HouseIntention> {
                                             fontSize: 17,
                                             fontWeight: FontWeight.w500),
                                       ),
-                                      // Icon(
-                                      //   Icons.navigate_next,
-                                      //   color: Colors.blue[300],
-                                      // ),
+                                      Icon(
+                                        Icons.navigate_next,
+                                        color: Colors.blue[300],
+                                      ),
                                     ],
                                   ),
                                 ),

@@ -143,7 +143,7 @@ class MineRemoteDataSourceImpl implements MineRemoteDataSource {
   Future<ApiResult> testVersion(String vInfo) async {
     try {
       final response = await retroRestService.testVersion();
-      // print(response);
+      print(response);
       if (response['ok'] == true) {
         return ApiResult.success(data: response['data']);
       }

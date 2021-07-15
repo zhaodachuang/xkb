@@ -56,6 +56,11 @@ class _EchartsAchieveDataState extends State<EchartsAchieveData> {
       return SingleChildScrollView(
           child: Column(children: [
         SizedBox(height: 5),
+        remark("shared:", "分享人数"),
+        remark("registrations:", "注册人数"),
+        remark("invite:", "邀约办理多少次"),
+        remark("appoint:", "下定、认筹审核多少次"),
+        SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
@@ -149,10 +154,10 @@ class _EchartsAchieveDataState extends State<EchartsAchieveData> {
         showEcharts(state.personnelYear, 'shared', 'registrations'),
         showEcharts(state.personnelYear, 'invite', 'appoint'),
         SizedBox(height: 30),
-        remark("shared:", "分享人数"),
-        remark("registrations:", "注册人数"),
-        remark("invite:", "邀约办理多少次"),
-        remark("appoint:", "下定、认筹审核多少次"),
+        // remark("shared:", "分享人数"),
+        // remark("registrations:", "注册人数"),
+        // remark("invite:", "邀约办理多少次"),
+        // remark("appoint:", "下定、认筹审核多少次"),
         SizedBox(height: 50),
 //         Container(
 //           child: Echarts(option: '''

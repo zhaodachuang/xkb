@@ -47,6 +47,8 @@ class _CustomerInformationState extends State<CustomerInformation> {
                 children: [
                   SizedBox(height: 20),
                   _details('客      户', widget.listData['customerName']),
+                  _detailsOther('备      注', widget.listData['description'],
+                      state.history, context),
                   _detailsKehuPhone('电      话', widget.listData['phone']),
                   _detailsComeFrom('客户来源', widget.listData['origin']),
                   _detailsLevels('意向等级', widget.listData['grade']),
@@ -55,8 +57,6 @@ class _CustomerInformationState extends State<CustomerInformation> {
                   _details('经 纪 人', widget.listData['brokerName']),
                   _detailsPhone('联系方式', widget.listData['brokerPhone']),
                   _details('当前流程', widget.listData['currentHandler']),
-                  _detailsOther('备      注', widget.listData['description'],
-                      state.history, context),
                 ],
               ),
             ),

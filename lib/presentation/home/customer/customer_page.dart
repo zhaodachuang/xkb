@@ -1347,7 +1347,7 @@ class _CustomerPageState extends State<CustomerPage> {
         mapName = {"selectItemKey03": "grade", "selectItemName03": "C"};
         return mapName;
       case "D类客户":
-        mapName = {"selectItemKey03": "grade", "selectItemName03": "C"};
+        mapName = {"selectItemKey03": "grade", "selectItemName03": "D"};
         return mapName;
     }
   }

@@ -57,8 +57,8 @@ class _RemindListState extends State<RemindList> {
   Widget build(BuildContext context) {
     return BlocProvider(
         create: (BuildContext context) => getIt<WebScoketBloc>()
-          ..add(const WebScoketEvent.batchUpdate())
-          ..add(const WebScoketEvent.managerRemindList(1)),
+          ..add(const WebScoketEvent.managerRemindList(1))
+          ..add(const WebScoketEvent.batchUpdate()),
         child: BlocConsumer<WebScoketBloc, WebScoketState>(
             listener: (context, state) async {
           print(state.managerRemindList);

@@ -255,8 +255,17 @@ class StompServiceImpl implements WebScoket {
     try {
       final response = await retroRestService.managerRemindList(formdata);
       // print(response);
+      //status为1是已接收，要剔除掉（搞不懂为什么2021.07讨论），
       if (response['ok'] == true) {
-        return ApiResult.success(data: response['data']['records']);
+        List listfinal = [];
+        List dataList = response['data']['records'];
+        for (int i = 0; i < dataList.length; i++) {
+          if (dataList[i]["status"] != "1") {
+            listfinal.add(dataList[i]);
+          }
+        }
+        // print(listfinal);
+        return ApiResult.success(data: listfinal);
       }
       return ApiResult.failure(
           error: NetworkExceptions.getDioException('login failed'));

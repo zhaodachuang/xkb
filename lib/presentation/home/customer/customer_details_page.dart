@@ -261,15 +261,19 @@ class _CustomerDetailsState extends State<CustomerDetails> {
                       // '刘先生',
                       _addValue01 != ""
                           ? _addValue01
-                          : widget.listData['customerName'] + " ",
+                          : (widget.listData['customerName'] != ""
+                              ? widget.listData['customerName'] + " "
+                              : "匿名用户"),
                       style: TextStyle(
                           color: Colors.white,
                           fontSize: 14.0,
                           fontWeight: FontWeight.w500),
                     )),
                     if (state.history.length != 0 &&
-                        state.history[0]['processDefinitionKey'] ==
-                            'acquisition')
+                        (state.history[0]['processDefinitionKey'] ==
+                                'acquisition' ||
+                            state.history[0]['processDefinitionKey'] ==
+                                'passenger'))
                       InkWell(
                         child: Icon(
                           Icons.create,
